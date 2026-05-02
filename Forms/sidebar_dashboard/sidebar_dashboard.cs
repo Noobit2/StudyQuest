@@ -28,6 +28,7 @@ namespace StudyQuest
             RefreshUI();
             RefreshTodayTasks();
             HighlightTodayLabel();
+            LoadNotes();
         }
 
         private void OnEXPChanged()
@@ -36,7 +37,7 @@ namespace StudyQuest
                 this.Invoke(new Action(OnEXPChanged));
             else
             {
-                _streak = StreakDatabase.GetCurrent(); // refresh streak from JSON
+                _streak = StreakDatabase.GetCurrent();
                 RefreshUI();
                 RefreshTodayTasks();
             }
@@ -45,12 +46,13 @@ namespace StudyQuest
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             sidebar_task.EXPChanged -= OnEXPChanged;
+            SaveNotesNow();
             base.OnFormClosing(e);
         }
 
         private void UpdateStreak()
         {
-            _streak = StreakDatabase.GetCurrent(); // just read, don't update on login
+            _streak = StreakDatabase.GetCurrent();
         }
 
         private void RefreshTodayTasks()
@@ -108,6 +110,29 @@ namespace StudyQuest
                 days[todayIndex].BackColor = highlight;
         }
 
+        // ─── Notes Persistence ───────────────────────────────────────────────
+
+        private void LoadNotes()
+        {
+            var data = NotesDatabase.Load();
+            if (richTextBox1 != null)
+                richTextBox1.Text = data.Content;
+        }
+
+        // PUBLIC so dashboard_ui can call it on logout
+        public void SaveNotesNow()
+        {
+            if (richTextBox1 != null)
+                NotesDatabase.Save(richTextBox1.Text);
+        }
+
+        // ─── Event Handlers ──────────────────────────────────────────────────
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            SaveNotesNow(); // Auto-save every time user types
+        }
+
         private void mustDOListBox_DoubleClick(object sender, EventArgs e) { }
         private void myTaskListBox_DoubleClick(object sender, EventArgs e) { }
         private void mustDOListBox_KeyDown(object sender, KeyEventArgs e) { }
@@ -115,7 +140,6 @@ namespace StudyQuest
         private void label1_Click(object sender, EventArgs e) { }
         private void label1_Click_1(object sender, EventArgs e) { }
         private void button1_Click(object sender, EventArgs e) { }
-        private void textBox1_TextChanged(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
         private void panel1_Paint(object sender, PaintEventArgs e) { }
         private void label8_Click(object sender, EventArgs e) { }

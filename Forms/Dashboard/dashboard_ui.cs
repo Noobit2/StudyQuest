@@ -41,8 +41,6 @@ namespace StudyQuest
             ShowPanel(ref _dashPanel, () => new sidebar_dashboard());
         }
 
-        // Total cumulative EXP needed to reach the NEXT level
-        // Level 1 = 200, Level 2 = 300, Level 3 = 400, Level 4 = 500...
         private static int GetCumulativeEXP(int level)
         {
             if (level == 1) return 200;
@@ -63,13 +61,8 @@ namespace StudyQuest
             int currentEXP = sidebar_task.CurrentEXP;
             userCurrentLvl.Text = $"Lvl. {level}";
 
-            // Total EXP at the start of current level
             int xpAtLevelStart = level == 1 ? 0 : GetCumulativeEXP(level - 1);
-
-            // EXP needed for THIS level only
             int xpNeededForThisLevel = level == 1 ? 200 : 100;
-
-            // EXP progress within current level
             int xpWithinLevel = currentEXP - xpAtLevelStart;
 
             int percent = (int)((float)xpWithinLevel / xpNeededForThisLevel * 100);
@@ -94,6 +87,13 @@ namespace StudyQuest
 
             this.pnlFormLoader.Controls.Add(field);
             field.Show();
+        }
+
+        // ✅ Save notes before anything closes
+        private void SaveNotesBeforeExit()
+        {
+            if (_dashPanel != null && !_dashPanel.IsDisposed)
+                _dashPanel.SaveNotesNow();
         }
 
         private void dashboardButton_Click(object sender, EventArgs e)
@@ -161,6 +161,9 @@ namespace StudyQuest
 
             if (result == DialogResult.Yes)
             {
+                // ✅ Save notes FIRST before anything is closed
+                SaveNotesBeforeExit();
+
                 sidebar_task.EXPChanged -= RefreshSidebar;
 
                 login_ui loginForm = new login_ui();
@@ -189,9 +192,6 @@ namespace StudyQuest
         private void progressBar1_Click(object sender, EventArgs e) { }
         private void userCurrentLvl_Click(object sender, EventArgs e) { }
 
-        private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void pnlFormLoader_Paint(object sender, PaintEventArgs e) { }
     }
 }
