@@ -52,6 +52,7 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -338,12 +339,23 @@
             pictureBox5.TabIndex = 25;
             pictureBox5.TabStop = false;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Pixelify Sans", 13F);
+            label8.Location = new Point(39, 284);
+            label8.Name = "label8";
+            label8.Size = new Size(0, 26);
+            label8.TabIndex = 26;
+            label8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // sidebar_dashboard
             // 
             AutoScaleDimensions = new SizeF(15F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 23, 42);
             ClientSize = new Size(1011, 744);
+            Controls.Add(label8);
             Controls.Add(numRank);
             Controls.Add(rankText);
             Controls.Add(numTaskDone);
@@ -410,5 +422,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
+        private Label label8;
     }
 }

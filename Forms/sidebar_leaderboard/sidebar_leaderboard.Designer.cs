@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sidebar_leaderboard));
             label1 = new Label();
             label2 = new Label();
-            panel1 = new Panel();
             player2LvlNum = new Label();
             player2CurrentXP = new Label();
             player2Username = new Label();
@@ -42,7 +41,6 @@
             player1Username = new Label();
             player1RankCount = new Label();
             player1Picture = new PictureBox();
-            panel3 = new Panel();
             player3LvlNum = new Label();
             player3CurrentXP = new Label();
             player3Username = new Label();
@@ -59,15 +57,17 @@
             player6RankCount = new Label();
             player6RankInfo = new Label();
             pictureBox4 = new PictureBox();
-            panel1.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)player2Picture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)player1Picture).BeginInit();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)player3Picture).BeginInit();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -94,58 +94,50 @@
             label2.Text = "Week of {current week date}";
             label2.Click += label2_Click;
             // 
-            // panel1
-            // 
-            panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(player2LvlNum);
-            panel1.Controls.Add(player2CurrentXP);
-            panel1.Controls.Add(player2Username);
-            panel1.Controls.Add(player2RankCount);
-            panel1.Controls.Add(player2Picture);
-            panel1.Location = new Point(78, 162);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(214, 287);
-            panel1.TabIndex = 2;
-            // 
             // player2LvlNum
             // 
             player2LvlNum.AutoSize = true;
-            player2LvlNum.Font = new Font("Pixelify Sans", 10.7999992F);
+            player2LvlNum.BackColor = Color.FromArgb(5, 11, 38);
+            player2LvlNum.Font = new Font("Pixelify Sans", 11F);
             player2LvlNum.ForeColor = Color.White;
-            player2LvlNum.Location = new Point(6, 227);
+            player2LvlNum.Location = new Point(117, 394);
             player2LvlNum.Name = "player2LvlNum";
-            player2LvlNum.Size = new Size(82, 22);
+            player2LvlNum.Size = new Size(85, 23);
             player2LvlNum.TabIndex = 4;
             player2LvlNum.Text = "{Lvl. no }";
             // 
             // player2CurrentXP
             // 
             player2CurrentXP.AutoSize = true;
-            player2CurrentXP.Font = new Font("Pixelify Sans", 10.7999992F);
+            player2CurrentXP.BackColor = Color.FromArgb(5, 11, 38);
+            player2CurrentXP.Font = new Font("Pixelify Sans", 11F);
             player2CurrentXP.ForeColor = Color.White;
-            player2CurrentXP.Location = new Point(87, 227);
+            player2CurrentXP.Location = new Point(192, 394);
             player2CurrentXP.Name = "player2CurrentXP";
-            player2CurrentXP.Size = new Size(123, 22);
+            player2CurrentXP.Size = new Size(126, 23);
             player2CurrentXP.TabIndex = 3;
             player2CurrentXP.Text = "{CurrentXP}";
             // 
             // player2Username
             // 
             player2Username.AutoSize = true;
-            player2Username.Font = new Font("Pixelify Sans", 10.7999992F);
+            player2Username.BackColor = Color.FromArgb(5, 11, 38);
+            player2Username.Font = new Font("Pixelify Sans", 14F);
             player2Username.ForeColor = Color.White;
-            player2Username.Location = new Point(45, 174);
+            player2Username.Location = new Point(144, 343);
             player2Username.Name = "player2Username";
-            player2Username.Size = new Size(115, 22);
+            player2Username.Size = new Size(150, 29);
             player2Username.TabIndex = 2;
             player2Username.Text = "{username}";
+            player2Username.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // player2RankCount
             // 
             player2RankCount.AutoSize = true;
+            player2RankCount.BackColor = Color.FromArgb(5, 11, 38);
             player2RankCount.Font = new Font("Pixelify Sans", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             player2RankCount.ForeColor = Color.White;
-            player2RankCount.Location = new Point(87, 138);
+            player2RankCount.Location = new Point(167, 305);
             player2RankCount.Name = "player2RankCount";
             player2RankCount.Size = new Size(35, 37);
             player2RankCount.TabIndex = 1;
@@ -154,7 +146,7 @@
             // 
             // player2Picture
             // 
-            player2Picture.Location = new Point(45, 29);
+            player2Picture.Location = new Point(125, 196);
             player2Picture.Name = "player2Picture";
             player2Picture.Size = new Size(123, 106);
             player2Picture.TabIndex = 0;
@@ -165,11 +157,11 @@
             // 
             player1LvlNum.AutoSize = true;
             player1LvlNum.BackColor = Color.FromArgb(5, 11, 38);
-            player1LvlNum.Font = new Font("Pixelify Sans", 10.7999992F);
+            player1LvlNum.Font = new Font("Pixelify Sans", 12F);
             player1LvlNum.ForeColor = Color.White;
-            player1LvlNum.Location = new Point(416, 340);
+            player1LvlNum.Location = new Point(414, 340);
             player1LvlNum.Name = "player1LvlNum";
-            player1LvlNum.Size = new Size(82, 22);
+            player1LvlNum.Size = new Size(89, 24);
             player1LvlNum.TabIndex = 4;
             player1LvlNum.Text = "{Lvl. no }";
             // 
@@ -177,11 +169,11 @@
             // 
             player1CurrentXP.AutoSize = true;
             player1CurrentXP.BackColor = Color.FromArgb(5, 11, 38);
-            player1CurrentXP.Font = new Font("Pixelify Sans", 10.7999992F);
+            player1CurrentXP.Font = new Font("Pixelify Sans", 12F);
             player1CurrentXP.ForeColor = Color.White;
-            player1CurrentXP.Location = new Point(497, 340);
+            player1CurrentXP.Location = new Point(509, 340);
             player1CurrentXP.Name = "player1CurrentXP";
-            player1CurrentXP.Size = new Size(123, 22);
+            player1CurrentXP.Size = new Size(135, 24);
             player1CurrentXP.TabIndex = 3;
             player1CurrentXP.Text = "{CurrentXP}";
             // 
@@ -189,13 +181,14 @@
             // 
             player1Username.AutoSize = true;
             player1Username.BackColor = Color.FromArgb(5, 11, 38);
-            player1Username.Font = new Font("Pixelify Sans", 10.7999992F);
+            player1Username.Font = new Font("Pixelify Sans", 15F);
             player1Username.ForeColor = Color.White;
-            player1Username.Location = new Point(439, 300);
+            player1Username.Location = new Point(473, 302);
             player1Username.Name = "player1Username";
-            player1Username.Size = new Size(115, 22);
+            player1Username.Size = new Size(160, 30);
             player1Username.TabIndex = 2;
             player1Username.Text = "{username}";
+            player1Username.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // player1RankCount
             // 
@@ -218,58 +211,50 @@
             player1Picture.TabIndex = 0;
             player1Picture.TabStop = false;
             // 
-            // panel3
-            // 
-            panel3.BorderStyle = BorderStyle.Fixed3D;
-            panel3.Controls.Add(player3LvlNum);
-            panel3.Controls.Add(player3CurrentXP);
-            panel3.Controls.Add(player3Username);
-            panel3.Controls.Add(player3RankCount);
-            panel3.Controls.Add(player3Picture);
-            panel3.Location = new Point(715, 208);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(214, 241);
-            panel3.TabIndex = 4;
-            // 
             // player3LvlNum
             // 
             player3LvlNum.AutoSize = true;
-            player3LvlNum.Font = new Font("Pixelify Sans", 10.7999992F);
+            player3LvlNum.BackColor = Color.FromArgb(5, 11, 38);
+            player3LvlNum.Font = new Font("Pixelify Sans", 11F);
             player3LvlNum.ForeColor = Color.White;
-            player3LvlNum.Location = new Point(13, 193);
+            player3LvlNum.Location = new Point(747, 396);
             player3LvlNum.Name = "player3LvlNum";
-            player3LvlNum.Size = new Size(82, 22);
+            player3LvlNum.Size = new Size(85, 23);
             player3LvlNum.TabIndex = 4;
             player3LvlNum.Text = "{Lvl. no }";
             // 
             // player3CurrentXP
             // 
             player3CurrentXP.AutoSize = true;
-            player3CurrentXP.Font = new Font("Pixelify Sans", 10.7999992F);
+            player3CurrentXP.BackColor = Color.FromArgb(5, 11, 38);
+            player3CurrentXP.Font = new Font("Pixelify Sans", 11F);
             player3CurrentXP.ForeColor = Color.White;
-            player3CurrentXP.Location = new Point(94, 193);
+            player3CurrentXP.Location = new Point(838, 396);
             player3CurrentXP.Name = "player3CurrentXP";
-            player3CurrentXP.Size = new Size(123, 22);
+            player3CurrentXP.Size = new Size(126, 23);
             player3CurrentXP.TabIndex = 3;
             player3CurrentXP.Text = "{CurrentXP}";
             // 
             // player3Username
             // 
             player3Username.AutoSize = true;
-            player3Username.Font = new Font("Pixelify Sans", 10.7999992F);
+            player3Username.BackColor = Color.FromArgb(5, 11, 38);
+            player3Username.Font = new Font("Pixelify Sans", 13F);
             player3Username.ForeColor = Color.White;
-            player3Username.Location = new Point(42, 167);
+            player3Username.Location = new Point(790, 370);
             player3Username.Name = "player3Username";
-            player3Username.Size = new Size(115, 22);
+            player3Username.Size = new Size(139, 26);
             player3Username.TabIndex = 2;
             player3Username.Text = "{username}";
+            player3Username.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // player3RankCount
             // 
             player3RankCount.AutoSize = true;
+            player3RankCount.BackColor = Color.FromArgb(5, 11, 38);
             player3RankCount.Font = new Font("Pixelify Sans", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             player3RankCount.ForeColor = Color.White;
-            player3RankCount.Location = new Point(94, 134);
+            player3RankCount.Location = new Point(811, 337);
             player3RankCount.Name = "player3RankCount";
             player3RankCount.Size = new Size(31, 33);
             player3RankCount.TabIndex = 1;
@@ -277,7 +262,7 @@
             // 
             // player3Picture
             // 
-            player3Picture.Location = new Point(42, 22);
+            player3Picture.Location = new Point(759, 225);
             player3Picture.Name = "player3Picture";
             player3Picture.Size = new Size(123, 106);
             player3Picture.TabIndex = 0;
@@ -402,36 +387,62 @@
             pictureBox4.TabIndex = 39;
             pictureBox4.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(80, 162);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(214, 287);
+            pictureBox1.TabIndex = 40;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(715, 208);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(214, 241);
+            pictureBox2.TabIndex = 41;
+            pictureBox2.TabStop = false;
+            // 
             // sidebar_leaderboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 23, 42);
             ClientSize = new Size(1011, 744);
+            Controls.Add(player3LvlNum);
+            Controls.Add(player3CurrentXP);
+            Controls.Add(player2LvlNum);
+            Controls.Add(player3Username);
+            Controls.Add(player2CurrentXP);
+            Controls.Add(player3RankCount);
             Controls.Add(player1LvlNum);
+            Controls.Add(player3Picture);
+            Controls.Add(player2Username);
             Controls.Add(player1CurrentXP);
+            Controls.Add(player2RankCount);
             Controls.Add(panel6);
+            Controls.Add(player2Picture);
             Controls.Add(player1Username);
             Controls.Add(panel5);
             Controls.Add(player1RankCount);
             Controls.Add(panel4);
             Controls.Add(player1Picture);
             Controls.Add(label11);
-            Controls.Add(panel3);
-            Controls.Add(panel1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox4);
+            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "sidebar_leaderboard";
             Text = "sidebar_leaderboard";
             Load += sidebar_leaderboard_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)player2Picture).EndInit();
             ((System.ComponentModel.ISupportInitialize)player1Picture).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)player3Picture).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
@@ -440,6 +451,8 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -448,7 +461,6 @@
 
         private Label label1;
         private Label label2;
-        private Panel panel1;
         private Label player2RankCount;
         private PictureBox player2Picture;
         private Label player2LvlNum;
@@ -459,7 +471,6 @@
         private Label player1Username;
         private Label player1RankCount;
         private PictureBox player1Picture;
-        private Panel panel3;
         private Label player3LvlNum;
         private Label player3CurrentXP;
         private Label player3Username;
@@ -476,5 +487,7 @@
         private Label player5RankCount;
         private Label player6RankCount;
         private PictureBox pictureBox4;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
