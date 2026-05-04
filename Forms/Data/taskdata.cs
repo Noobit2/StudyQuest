@@ -5,7 +5,6 @@ using System.Text.Json;
 
 namespace StudyQuest
 {
-    // Represents a single saved task
     public class TaskData
     {
         public string Title { get; set; } = string.Empty;
@@ -17,10 +16,10 @@ namespace StudyQuest
         public int ExpReward { get; set; } = 0;
     }
 
-    // Represents the full saved state
     public class TaskSaveData
     {
         public int CurrentEXP { get; set; } = 0;
+        public int TotalEarnedEXP { get; set; } = 0; // ← NEW
         public int CurrentLevel { get; set; } = 1;
         public int CompletedCount { get; set; } = 0;
         public int MissedCount { get; set; } = 0;
@@ -33,7 +32,6 @@ namespace StudyQuest
             AppDomain.CurrentDomain.BaseDirectory, "tasks.json"
         );
 
-        // ── Load all task data from JSON ─────────────────────────────────────
         public static TaskSaveData Load()
         {
             try
@@ -50,7 +48,6 @@ namespace StudyQuest
             }
         }
 
-        // ── Save all task data to JSON ────────────────────────────────────────
         public static void Save(TaskSaveData data)
         {
             try

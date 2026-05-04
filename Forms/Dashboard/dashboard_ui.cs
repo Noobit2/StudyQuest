@@ -58,14 +58,25 @@ namespace StudyQuest
             usernameTextbox.Text = GameSession.Username;
 
             int level = sidebar_task.CurrentLevel;
-            int currentEXP = sidebar_task.CurrentEXP;
+            int earnedEXP = sidebar_task.TotalEarnedEXP;
             userCurrentLvl.Text = $"Lvl. {level}";
 
-            int xpAtLevelStart = level == 1 ? 0 : GetCumulativeEXP(level - 1);
-            int xpNeededForThisLevel = level == 1 ? 200 : 100;
-            int xpWithinLevel = currentEXP - xpAtLevelStart;
+            int xpAtLevelStart;
+            int xpNeededPerLevel;
 
-            int percent = (int)((float)xpWithinLevel / xpNeededForThisLevel * 100);
+            if (level == 1)
+            {
+                xpAtLevelStart = 0;
+                xpNeededPerLevel = 200;
+            }
+            else
+            {
+                xpAtLevelStart = 200 + (level - 2) * 100;
+                xpNeededPerLevel = 100;
+            }
+
+            int xpWithinLevel = earnedEXP - xpAtLevelStart;
+            int percent = (int)((float)xpWithinLevel / xpNeededPerLevel * 100);
             percent = Math.Max(0, Math.Min(100, percent));
 
             progressBar1.Value = percent;
@@ -89,7 +100,6 @@ namespace StudyQuest
             field.Show();
         }
 
-        // ✅ Save notes before anything closes
         private void SaveNotesBeforeExit()
         {
             if (_dashPanel != null && !_dashPanel.IsDisposed)
