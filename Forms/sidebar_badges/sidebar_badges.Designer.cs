@@ -83,11 +83,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Pixelify Sans", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(33, 34);
+            label1.Location = new Point(29, 26);
             label1.Name = "label1";
-            label1.Size = new Size(377, 37);
+            label1.Size = new Size(286, 29);
             label1.TabIndex = 0;
             label1.Text = "Badges and Achievement";
             label1.Click += label1_Click;
@@ -95,11 +95,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Pixelify Sans", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(637, 74);
+            label2.Location = new Point(557, 56);
             label2.Name = "label2";
-            label2.Size = new Size(320, 21);
+            label2.Size = new Size(257, 17);
             label2.TabIndex = 1;
             label2.Text = "0 out of 8 Badges Unlocked! Keep it up!";
             label2.Click += label2_Click;
@@ -110,38 +110,40 @@
             panel3.Controls.Add(player3CurrentXP);
             panel3.Controls.Add(player3Picture);
             panel3.Controls.Add(player3Username);
-            panel3.Location = new Point(43, 140);
+            panel3.Location = new Point(38, 105);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(201, 241);
+            panel3.Size = new Size(176, 182);
             panel3.TabIndex = 5;
             // 
             // player3CurrentXP
             // 
             player3CurrentXP.AutoSize = true;
-            player3CurrentXP.Font = new Font("Pixelify Sans", 8F);
+            player3CurrentXP.Font = new Font("Microsoft Sans Serif", 8F);
             player3CurrentXP.ForeColor = Color.White;
-            player3CurrentXP.Location = new Point(8, 180);
+            player3CurrentXP.Location = new Point(7, 135);
             player3CurrentXP.Name = "player3CurrentXP";
-            player3CurrentXP.Size = new Size(182, 17);
+            player3CurrentXP.Size = new Size(119, 13);
             player3CurrentXP.TabIndex = 3;
             player3CurrentXP.Text = "Complete your first task.";
             // 
             // player3Picture
             // 
-            player3Picture.Location = new Point(47, 24);
+            player3Picture.Location = new Point(41, 18);
+            player3Picture.Margin = new Padding(3, 2, 3, 2);
             player3Picture.Name = "player3Picture";
-            player3Picture.Size = new Size(100, 100);
+            player3Picture.Size = new Size(88, 75);
             player3Picture.TabIndex = 0;
             player3Picture.TabStop = false;
             // 
             // player3Username
             // 
             player3Username.AutoSize = true;
-            player3Username.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            player3Username.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             player3Username.ForeColor = Color.White;
-            player3Username.Location = new Point(13, 139);
+            player3Username.Location = new Point(11, 104);
             player3Username.Name = "player3Username";
-            player3Username.Size = new Size(171, 24);
+            player3Username.Size = new Size(118, 20);
             player3Username.TabIndex = 2;
             player3Username.Text = "First Task? yey!";
             player3Username.Click += player3Username_Click;
@@ -152,60 +154,63 @@
             panel1.Controls.Add(label15);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label16);
-            panel1.Location = new Point(280, 140);
+            panel1.Location = new Point(245, 105);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(201, 241);
+            panel1.Size = new Size(176, 182);
             panel1.TabIndex = 6;
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Font = new Font("Pixelify Sans", 7.79999971F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.Font = new Font("Microsoft Sans Serif", 7.79999971F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.White;
-            label15.Location = new Point(21, 180);
+            label15.Location = new Point(18, 135);
             label15.Name = "label15";
-            label15.Size = new Size(148, 16);
+            label15.Size = new Size(112, 13);
             label15.TabIndex = 3;
             label15.Text = "Achieve 7 day Streak!";
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(47, 24);
+            pictureBox1.Location = new Point(41, 18);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.Size = new Size(88, 75);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(30, 139);
+            label16.Location = new Point(26, 104);
             label16.Name = "label16";
-            label16.Size = new Size(134, 24);
+            label16.Size = new Size(95, 20);
             label16.TabIndex = 2;
             label16.Text = "Consistency";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Pixelify Sans", 8F);
+            label3.Font = new Font("Microsoft Sans Serif", 8F);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(27, 180);
+            label3.Location = new Point(24, 135);
             label3.Name = "label3";
-            label3.Size = new Size(144, 17);
+            label3.Size = new Size(129, 13);
             label3.TabIndex = 3;
-            label3.Text = "Have 100XP or above.";
+            label3.Text = "Achieve 100XP or above.";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(13, 141);
+            label4.Location = new Point(11, 106);
             label4.Name = "label4";
-            label4.Size = new Size(168, 24);
+            label4.Size = new Size(111, 20);
             label4.TabIndex = 2;
             label4.Text = "Just Starting...";
             // 
@@ -215,49 +220,51 @@
             panel2.Controls.Add(label5);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(label14);
-            panel2.Location = new Point(519, 140);
+            panel2.Location = new Point(454, 105);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(201, 241);
+            panel2.Size = new Size(176, 182);
             panel2.TabIndex = 7;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Pixelify Sans", 8F);
+            label5.Font = new Font("Microsoft Sans Serif", 8F);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(13, 180);
+            label5.Location = new Point(11, 135);
             label5.Name = "label5";
-            label5.Size = new Size(158, 17);
+            label5.Size = new Size(118, 13);
             label5.TabIndex = 3;
             label5.Text = "Achieve 50 day Streak!";
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(47, 24);
+            pictureBox2.Location = new Point(41, 18);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 100);
+            pictureBox2.Size = new Size(88, 75);
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.White;
-            label14.Location = new Point(39, 139);
+            label14.Location = new Point(34, 104);
             label14.Name = "label14";
-            label14.Size = new Size(113, 24);
+            label14.Size = new Size(90, 20);
             label14.TabIndex = 2;
             label14.Text = "I'm On Fire!";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(13, 132);
+            label6.Location = new Point(11, 99);
             label6.Name = "label6";
-            label6.Size = new Size(178, 48);
+            label6.Size = new Size(127, 40);
             label6.TabIndex = 2;
             label6.Text = "Do I Know \r\nEverything Now?";
             label6.TextAlign = ContentAlignment.MiddleCenter;
@@ -268,38 +275,40 @@
             panel4.Controls.Add(label7);
             panel4.Controls.Add(pictureBox3);
             panel4.Controls.Add(label8);
-            panel4.Location = new Point(756, 140);
+            panel4.Location = new Point(662, 105);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(201, 241);
+            panel4.Size = new Size(176, 182);
             panel4.TabIndex = 8;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Pixelify Sans", 8F);
+            label7.Font = new Font("Microsoft Sans Serif", 8F);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(13, 180);
+            label7.Location = new Point(11, 135);
             label7.Name = "label7";
-            label7.Size = new Size(164, 17);
+            label7.Size = new Size(124, 13);
             label7.TabIndex = 3;
             label7.Text = "Achieve 100 day Streak!";
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(47, 24);
+            pictureBox3.Location = new Point(41, 18);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(100, 100);
+            pictureBox3.Size = new Size(88, 75);
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(20, 139);
+            label8.Location = new Point(18, 104);
             label8.Name = "label8";
-            label8.Size = new Size(161, 24);
+            label8.Size = new Size(119, 20);
             label8.TabIndex = 2;
             label8.Text = "Can't Stop Me~";
             // 
@@ -309,38 +318,40 @@
             panel5.Controls.Add(label9);
             panel5.Controls.Add(pictureBox4);
             panel5.Controls.Add(label10);
-            panel5.Location = new Point(756, 429);
+            panel5.Location = new Point(662, 322);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(201, 241);
+            panel5.Size = new Size(176, 182);
             panel5.TabIndex = 12;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Pixelify Sans", 8F);
+            label9.Font = new Font("Microsoft Sans Serif", 8F);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(47, 180);
+            label9.Location = new Point(41, 135);
             label9.Name = "label9";
-            label9.Size = new Size(97, 17);
+            label9.Size = new Size(77, 13);
             label9.TabIndex = 3;
             label9.Text = "Achieve lvl. 60";
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(47, 24);
+            pictureBox4.Location = new Point(41, 18);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(100, 100);
+            pictureBox4.Size = new Size(88, 75);
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(36, 141);
+            label10.Location = new Point(32, 106);
             label10.Name = "label10";
-            label10.Size = new Size(130, 24);
+            label10.Size = new Size(96, 20);
             label10.TabIndex = 2;
             label10.Text = "Legendary!!!";
             // 
@@ -350,38 +361,41 @@
             panel6.Controls.Add(label11);
             panel6.Controls.Add(pictureBox5);
             panel6.Controls.Add(label12);
-            panel6.Location = new Point(519, 429);
+            panel6.Location = new Point(454, 322);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(201, 241);
+            panel6.Size = new Size(176, 182);
             panel6.TabIndex = 11;
+            panel6.Paint += panel6_Paint;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Pixelify Sans", 8F);
+            label11.Font = new Font("Microsoft Sans Serif", 8F);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(47, 194);
+            label11.Location = new Point(41, 146);
             label11.Name = "label11";
-            label11.Size = new Size(98, 17);
+            label11.Size = new Size(78, 13);
             label11.TabIndex = 3;
             label11.Text = "Achieve Lvl.30";
             // 
             // pictureBox5
             // 
-            pictureBox5.Location = new Point(47, 24);
+            pictureBox5.Location = new Point(41, 18);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(100, 100);
+            pictureBox5.Size = new Size(88, 75);
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(47, 128);
+            label12.Location = new Point(41, 96);
             label12.Name = "label12";
-            label12.Size = new Size(111, 48);
+            label12.Size = new Size(82, 40);
             label12.TabIndex = 2;
             label12.Text = "Master? \r\nThat's Me.";
             label12.TextAlign = ContentAlignment.MiddleCenter;
@@ -392,27 +406,30 @@
             panel7.Controls.Add(label13);
             panel7.Controls.Add(pictureBox6);
             panel7.Controls.Add(label6);
-            panel7.Location = new Point(280, 429);
+            panel7.Location = new Point(245, 322);
+            panel7.Margin = new Padding(3, 2, 3, 2);
             panel7.Name = "panel7";
-            panel7.Size = new Size(201, 241);
+            panel7.Size = new Size(176, 182);
             panel7.TabIndex = 10;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Pixelify Sans", 8F);
+            label13.Font = new Font("Microsoft Sans Serif", 8F);
             label13.ForeColor = Color.White;
-            label13.Location = new Point(13, 194);
+            label13.Location = new Point(11, 146);
             label13.Name = "label13";
-            label13.Size = new Size(164, 17);
+            label13.Size = new Size(144, 13);
             label13.TabIndex = 3;
-            label13.Text = "Have 10,000XP or above.";
+            label13.Text = "Achieve 10,000XP or above.";
+            label13.Click += label13_Click;
             // 
             // pictureBox6
             // 
-            pictureBox6.Location = new Point(47, 24);
+            pictureBox6.Location = new Point(41, 18);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(100, 100);
+            pictureBox6.Size = new Size(88, 75);
             pictureBox6.TabIndex = 0;
             pictureBox6.TabStop = false;
             // 
@@ -422,25 +439,27 @@
             panel8.Controls.Add(pictureBox7);
             panel8.Controls.Add(label3);
             panel8.Controls.Add(label4);
-            panel8.Location = new Point(43, 429);
+            panel8.Location = new Point(38, 322);
+            panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
-            panel8.Size = new Size(201, 241);
+            panel8.Size = new Size(176, 182);
             panel8.TabIndex = 9;
             // 
             // pictureBox7
             // 
-            pictureBox7.Location = new Point(47, 24);
+            pictureBox7.Location = new Point(41, 18);
+            pictureBox7.Margin = new Padding(3, 2, 3, 2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(100, 100);
+            pictureBox7.Size = new Size(88, 75);
             pictureBox7.TabIndex = 0;
             pictureBox7.TabStop = false;
             // 
             // sidebar_badges
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 23, 42);
-            ClientSize = new Size(1011, 744);
+            ClientSize = new Size(885, 558);
             Controls.Add(panel5);
             Controls.Add(panel6);
             Controls.Add(panel7);
@@ -452,6 +471,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "sidebar_badges";
             Text = "sidebar_badges";
             panel3.ResumeLayout(false);
