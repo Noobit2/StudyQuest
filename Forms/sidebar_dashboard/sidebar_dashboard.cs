@@ -76,9 +76,10 @@ namespace StudyQuest
 
         private void RefreshUI()
         {
-            GameSession.TotalXP = TotalXP;
+            GameSession.TotalXP = sidebar_task.TotalEarnedEXP;
             GameSession.Level = CurrentLevel;
             GameSession.Username = username;
+            GameSession.StreakDays = _streak.StreakDays;
 
             if (greetingsUser != null)
                 greetingsUser.Text = $"Good day, {username}!";
@@ -110,8 +111,6 @@ namespace StudyQuest
                 days[todayIndex].BackColor = highlight;
         }
 
-        // ─── Notes Persistence ───────────────────────────────────────────────
-
         private void LoadNotes()
         {
             var data = NotesDatabase.Load();
@@ -119,18 +118,16 @@ namespace StudyQuest
                 richTextBox1.Text = data.Content;
         }
 
-        // PUBLIC so dashboard_ui can call it on logout
         public void SaveNotesNow()
         {
             if (richTextBox1 != null)
                 NotesDatabase.Save(richTextBox1.Text);
         }
 
-        // ─── Event Handlers ──────────────────────────────────────────────────
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            SaveNotesNow(); // Auto-save every time user types
+            SaveNotesNow();
         }
 
         private void mustDOListBox_DoubleClick(object sender, EventArgs e) { }

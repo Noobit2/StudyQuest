@@ -35,7 +35,6 @@ namespace StudyQuest
 
             sidebar_task.EXPChanged += RefreshSidebar;
 
-            // 🔥 Subscribe to avatar changes
             sidebar_avatar.AvatarApplied += OnAvatarApplied;
 
             usernameTextbox.Text = GameSession.Username;
@@ -44,7 +43,6 @@ namespace StudyQuest
             ShowPanel(ref _dashPanel, () => new sidebar_dashboard());
         }
 
-        // 🔥 Updates userPicture in the sidebar when avatar is applied
         private void OnAvatarApplied(Image img)
         {
             if (this.InvokeRequired)
@@ -190,7 +188,7 @@ namespace StudyQuest
                 SaveNotesBeforeExit();
 
                 sidebar_task.EXPChanged -= RefreshSidebar;
-                sidebar_avatar.AvatarApplied -= OnAvatarApplied; // ✅ Unsubscribe
+                sidebar_avatar.AvatarApplied -= OnAvatarApplied;
 
                 login_ui loginForm = new login_ui();
                 loginForm.Show();

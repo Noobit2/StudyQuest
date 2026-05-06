@@ -19,7 +19,7 @@ namespace StudyQuest
     public class TaskSaveData
     {
         public int CurrentEXP { get; set; } = 0;
-        public int TotalEarnedEXP { get; set; } = 0; // ← NEW
+        public int TotalEarnedEXP { get; set; } = 0;
         public int CurrentLevel { get; set; } = 1;
         public int CompletedCount { get; set; } = 0;
         public int MissedCount { get; set; } = 0;

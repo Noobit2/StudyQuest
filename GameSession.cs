@@ -23,9 +23,9 @@ namespace StudyQuest
         public static int GetCurrentRank()
         {
             var fullBoard = new List<(string Username, int Level, int XP)>(OtherPlayers)
-            {
-                (Username, Level, TotalXP)
-            };
+    {
+        (Username, Level, sidebar_task.TotalEarnedEXP)
+    };
 
             return fullBoard
                 .OrderByDescending(p => p.XP)
