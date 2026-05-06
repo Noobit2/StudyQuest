@@ -21,7 +21,6 @@ namespace StudyQuest
 
         public static event Action<Image>? AvatarApplied;
 
-        // ── Public image getters so dashboard_ui can load saved avatar ────────
         public Image? GetEggImage() => pictureBox3.Image;
         public Image? GetGirlImage() => pictureBox1.Image;
         public Image? GetBoyImage() => pictureBox2.Image;
@@ -69,7 +68,6 @@ namespace StudyQuest
                 RefreshXP();
         }
 
-        // ── LOAD from avatar.json ─────────────────────────────────────────────
         private void LoadFromDatabase()
         {
             var data = AvatarDatabase.Load();
@@ -103,7 +101,6 @@ namespace StudyQuest
             }
         }
 
-        // ── SAVE to avatar.json ───────────────────────────────────────────────
         private void SaveToDatabase()
         {
             var data = new AvatarData
@@ -179,10 +176,10 @@ namespace StudyQuest
 
             string itemName = item switch
             {
-                AvatarItem.Egg => "🥚 Egg",
-                AvatarItem.Girl => "👧 Girl",
-                AvatarItem.Boy => "👦 Boy",
-                AvatarItem.Banana => "🍌 Banana",
+                AvatarItem.Egg => " Egg",
+                AvatarItem.Girl => " Girl",
+                AvatarItem.Boy => " Boy",
+                AvatarItem.Banana => " Banana",
                 _ => ""
             };
 
@@ -204,7 +201,7 @@ namespace StudyQuest
                     $"{itemName}\n\n" +
                     $"Price     : {price} XP\n" +
                     $"Your XP   : {sidebar_task.CurrentEXP} XP\n" +
-                    $"Status    : 🔒 Locked\n\n" +
+                    $"Status    :  Locked\n\n" +
                     $"Click 'Unlock {price} XP' to purchase!",
                     "Item Info", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -275,7 +272,7 @@ namespace StudyQuest
             SaveToDatabase();
 
             MessageBox.Show(
-                $"Avatar unlocked! 🎉\n" +
+                $"Avatar unlocked! \n" +
                 $"-{price} XP spent\n" +
                 $"Remaining XP: {sidebar_task.CurrentEXP} XP",
                 "Unlocked!",
@@ -307,7 +304,7 @@ namespace StudyQuest
             UpdateItemBorders();
             SaveToDatabase();
 
-            MessageBox.Show("Avatar applied! ✓",
+            MessageBox.Show("Avatar applied! ",
                             "Avatar Changed",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -369,5 +366,10 @@ namespace StudyQuest
         private void label1_Click(object sender, EventArgs e) { }
         private void pictureBox26_Click(object sender, EventArgs e) { }
         private void label5_Click(object sender, EventArgs e) { }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

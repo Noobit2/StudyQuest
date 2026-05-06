@@ -63,7 +63,7 @@ namespace StudyQuest
 
             if (todayTasks.Count == 0)
             {
-                mustDOListBox.Items.Add("✅ No tasks due today!");
+                mustDOListBox.Items.Add(" No tasks due today!");
                 mustDOListBox.ForeColor = Color.FromArgb(52, 211, 153);
             }
             else

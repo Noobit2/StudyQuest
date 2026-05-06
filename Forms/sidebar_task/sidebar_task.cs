@@ -134,10 +134,10 @@ namespace StudyQuest
                 if (task.IsCompleted || task.IsMissed) continue;
 
                 if (task.Deadline.Date == DateTime.Today)
-                    result.Add($"🔴 {task.Title}  (+{task.ExpReward} EXP)");
+                    result.Add($" {task.Title}  (+{task.ExpReward} EXP)");
                 else if (task.Deadline.Date > DateTime.Today &&
                          task.Deadline.Date <= DateTime.Today.AddDays(1))
-                    result.Add($"🟡 {task.Title}  (+{task.ExpReward} EXP)");
+                    result.Add($" {task.Title}  (+{task.ExpReward} EXP)");
             }
 
             return result;
@@ -272,7 +272,7 @@ namespace StudyQuest
 
             int idx = listBox.Items.IndexOf(task);
             listBox.Items[idx] =
-                $"✓  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{expGain} EXP)";
+                $"  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{expGain} EXP)";
 
             listBox.ClearSelected();
             StreakDatabase.OnTaskCompleted();
@@ -285,7 +285,7 @@ namespace StudyQuest
                 $"Total EXP    : {CurrentEXP}\n" +
                 $"Earned EXP   : {TotalEarnedEXP}\n" +
                 $"Level        : {CurrentLevel}",
-                "Task Complete! 🎉",
+                "Task Complete! ",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -368,7 +368,7 @@ namespace StudyQuest
                 $"Details   : {task.Details}\n" +
                 $"Deadline  : {task.Deadline:MM/dd/yyyy}\n" +
                 $"Difficulty: {task.Difficulty}  (+{task.ExpReward} EXP)\n" +
-                $"Status    : {(task.IsMissed ? "⚠ Missed" : "Pending")}",
+                $"Status    : {(task.IsMissed ? " Missed" : "Pending")}",
                 "Task Details",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -404,13 +404,13 @@ namespace StudyQuest
                 if (CurrentLevel == MaxLevel)
                 {
                     MessageBox.Show(
-                        "🏆  MAX LEVEL REACHED!\nYou are now Level 100!",
+                        "  MAX LEVEL REACHED!\nYou are now Level 100!",
                         "Max Level!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show(
-                        $"🎉  LEVEL UP!\nYou are now Level {CurrentLevel}!",
+                        $"  LEVEL UP!\nYou are now Level {CurrentLevel}!",
                         "Level Up", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -500,14 +500,14 @@ namespace StudyQuest
                         _ => HardTaskListBox
                     };
                     target.Items.Add(
-                        $"✓  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{task.ExpReward} EXP)");
+                        $"  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{task.ExpReward} EXP)");
                     continue;
                 }
 
                 if (task.IsMissed)
                 {
                     HardTaskListBox.Items.Add(
-                        $"⚠ MISSED: {task.Title}  [{task.Deadline:MM/dd/yyyy}]");
+                        $" MISSED: {task.Title}  [{task.Deadline:MM/dd/yyyy}]");
                     continue;
                 }
 
@@ -548,7 +548,6 @@ namespace StudyQuest
 
         public static (int exp, int level) GetPlayerStats() => (CurrentEXP, CurrentLevel);
 
-        // ── Designer stubs ────────────────────────────────────────────────────
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e) { }
