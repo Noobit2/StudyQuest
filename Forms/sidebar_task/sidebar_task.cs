@@ -500,7 +500,7 @@ namespace StudyQuest
                         _ => HardTaskListBox
                     };
                     target.Items.Add(
-                        $"  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{task.ExpReward} EXP)");
+                        $"✔  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{task.ExpReward} EXP)");
                     continue;
                 }
 
