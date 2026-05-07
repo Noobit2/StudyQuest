@@ -49,13 +49,13 @@ namespace StudyQuest
             int streakDays = GameSession.StreakDays;
 
             if (completedTasks >= 1) _badge1Unlocked = true;
-            if (streakDays >= 7) _badge2Unlocked = true;
-            if (streakDays >= 50) _badge3Unlocked = true;
-            if (streakDays >= 100) _badge4Unlocked = true;
+            if (streakDays >= 3) _badge2Unlocked = true;
+            if (streakDays >= 7) _badge3Unlocked = true;
+            if (streakDays >= 15) _badge4Unlocked = true;
             if (totalEarnedEXP >= 100) _badge5Unlocked = true;
             if (totalEarnedEXP >= 10000) _badge6Unlocked = true;
-            if (currentLevel >= 30) _badge7Unlocked = true;
-            if (currentLevel >= 60) _badge8Unlocked = true;
+            if (currentLevel >= 5) _badge7Unlocked = true;
+            if (currentLevel >= 10) _badge8Unlocked = true;
 
             ApplyBadge(panel3, _badge1Unlocked);
             ApplyBadge(panel1, _badge2Unlocked);
