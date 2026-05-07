@@ -102,11 +102,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Pixelify Sans", 18F);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(29, 26);
+            label1.Location = new Point(33, 35);
             label1.Name = "label1";
-            label1.Size = new Size(286, 29);
+            label1.Size = new Size(377, 37);
             label1.TabIndex = 0;
             label1.Text = "Badges and Achievement";
             label1.Click += label1_Click;
@@ -114,11 +114,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Pixelify Sans", 11F);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(640, 46);
+            label2.Location = new Point(599, 49);
             label2.Name = "label2";
-            label2.Size = new Size(257, 17);
+            label2.Size = new Size(355, 23);
             label2.TabIndex = 1;
             label2.Text = "0 out of 8 Badges Unlocked! Keep it up!";
             label2.Click += label2_Click;
@@ -129,9 +129,9 @@
             player3CurrentXP.BackColor = Color.FromArgb(5, 11, 38);
             player3CurrentXP.Font = new Font("Pixelify Sans", 8F);
             player3CurrentXP.ForeColor = Color.White;
-            player3CurrentXP.Location = new Point(11, 182);
+            player3CurrentXP.Location = new Point(18, 210);
             player3CurrentXP.Name = "player3CurrentXP";
-            player3CurrentXP.Size = new Size(119, 13);
+            player3CurrentXP.Size = new Size(182, 17);
             player3CurrentXP.TabIndex = 3;
             player3CurrentXP.Text = "Complete your first task.";
             // 
@@ -139,9 +139,10 @@
             // 
             player3Picture.BackColor = Color.FromArgb(5, 11, 38);
             player3Picture.Image = (Image)resources.GetObject("player3Picture.Image");
-            player3Picture.Location = new Point(50, 38);
+            player3Picture.Location = new Point(57, 40);
+            player3Picture.Margin = new Padding(3, 4, 3, 4);
             player3Picture.Name = "player3Picture";
-            player3Picture.Size = new Size(88, 75);
+            player3Picture.Size = new Size(101, 100);
             player3Picture.TabIndex = 0;
             player3Picture.TabStop = false;
             // 
@@ -151,9 +152,9 @@
             player3Username.BackColor = Color.FromArgb(5, 11, 38);
             player3Username.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             player3Username.ForeColor = Color.White;
-            player3Username.Location = new Point(16, 141);
+            player3Username.Location = new Point(24, 167);
             player3Username.Name = "player3Username";
-            player3Username.Size = new Size(118, 20);
+            player3Username.Size = new Size(171, 24);
             player3Username.TabIndex = 2;
             player3Username.Text = "First Task? yey!";
             player3Username.Click += player3Username_Click;
@@ -164,9 +165,9 @@
             label3.BackColor = Color.FromArgb(5, 11, 38);
             label3.Font = new Font("Pixelify Sans", 8F);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(35, 202);
+            label3.Location = new Point(21, 210);
             label3.Name = "label3";
-            label3.Size = new Size(129, 13);
+            label3.Size = new Size(163, 17);
             label3.TabIndex = 3;
             label3.Text = "Achieve 100XP or above.";
             label3.Click += label3_Click;
@@ -177,9 +178,9 @@
             label4.BackColor = Color.FromArgb(5, 11, 38);
             label4.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(23, 152);
+            label4.Location = new Point(24, 164);
             label4.Name = "label4";
-            label4.Size = new Size(111, 20);
+            label4.Size = new Size(168, 24);
             label4.TabIndex = 2;
             label4.Text = "Just Starting...";
             // 
@@ -189,7 +190,7 @@
             label5.BackColor = Color.FromArgb(5, 11, 38);
             label5.Font = new Font("Pixelify Sans", 8F);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(26, 181);
+            label5.Location = new Point(30, 205);
             label5.Name = "label5";
             label5.Size = new Size(150, 17);
             label5.TabIndex = 3;
@@ -199,9 +200,10 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(32, 25);
+            pictureBox2.Location = new Point(37, 18);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(144, 113);
+            pictureBox2.Size = new Size(143, 118);
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
@@ -211,9 +213,9 @@
             label14.BackColor = Color.FromArgb(5, 11, 38);
             label14.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.White;
-            label14.Location = new Point(44, 141);
+            label14.Location = new Point(54, 163);
             label14.Name = "label14";
-            label14.Size = new Size(90, 20);
+            label14.Size = new Size(113, 24);
             label14.TabIndex = 2;
             label14.Text = "I'm On Fire!";
             // 
@@ -223,9 +225,9 @@
             label6.BackColor = Color.FromArgb(5, 11, 38);
             label6.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(21, 137);
+            label6.Location = new Point(24, 156);
             label6.Name = "label6";
-            label6.Size = new Size(127, 40);
+            label6.Size = new Size(178, 48);
             label6.TabIndex = 2;
             label6.Text = "Do I Know \r\nEverything Now?";
             label6.TextAlign = ContentAlignment.MiddleCenter;
@@ -236,7 +238,7 @@
             label7.BackColor = Color.FromArgb(5, 11, 38);
             label7.Font = new Font("Pixelify Sans", 8F);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(27, 184);
+            label7.Location = new Point(22, 205);
             label7.Name = "label7";
             label7.Size = new Size(156, 17);
             label7.TabIndex = 3;
@@ -246,9 +248,10 @@
             // 
             pictureBox3.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(51, 41);
+            pictureBox3.Location = new Point(57, 40);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(88, 75);
+            pictureBox3.Size = new Size(101, 100);
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
             // 
@@ -258,9 +261,9 @@
             label8.BackColor = Color.FromArgb(5, 11, 38);
             label8.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(27, 144);
+            label8.Location = new Point(25, 163);
             label8.Name = "label8";
-            label8.Size = new Size(119, 20);
+            label8.Size = new Size(161, 24);
             label8.TabIndex = 2;
             label8.Text = "Can't Stop Me~";
             // 
@@ -270,7 +273,7 @@
             label9.BackColor = Color.FromArgb(5, 11, 38);
             label9.Font = new Font("Pixelify Sans", 8F);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(51, 199);
+            label9.Location = new Point(57, 214);
             label9.Name = "label9";
             label9.Size = new Size(95, 17);
             label9.TabIndex = 3;
@@ -280,7 +283,8 @@
             // 
             pictureBox4.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(51, 29);
+            pictureBox4.Location = new Point(57, 40);
+            pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(100, 100);
             pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -293,11 +297,12 @@
             label10.BackColor = Color.FromArgb(5, 11, 38);
             label10.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(40, 146);
+            label10.Location = new Point(45, 168);
             label10.Name = "label10";
-            label10.Size = new Size(96, 20);
+            label10.Size = new Size(130, 24);
             label10.TabIndex = 2;
             label10.Text = "Legendary!!!";
+            label10.Click += label10_Click;
             // 
             // label11
             // 
@@ -305,7 +310,7 @@
             label11.BackColor = Color.FromArgb(5, 11, 38);
             label11.Font = new Font("Pixelify Sans", 8F);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(54, 200);
+            label11.Location = new Point(62, 210);
             label11.Name = "label11";
             label11.Size = new Size(90, 17);
             label11.TabIndex = 3;
@@ -315,7 +320,8 @@
             // 
             pictureBox5.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(54, 30);
+            pictureBox5.Location = new Point(57, 40);
+            pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(100, 100);
             pictureBox5.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -328,9 +334,9 @@
             label12.BackColor = Color.FromArgb(5, 11, 38);
             label12.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(54, 134);
+            label12.Location = new Point(62, 152);
             label12.Name = "label12";
-            label12.Size = new Size(82, 40);
+            label12.Size = new Size(111, 48);
             label12.TabIndex = 2;
             label12.Text = "Master? \r\nThat's Me.";
             label12.TextAlign = ContentAlignment.MiddleCenter;
@@ -341,7 +347,7 @@
             label13.BackColor = Color.FromArgb(5, 11, 38);
             label13.Font = new Font("Pixelify Sans", 8F);
             label13.ForeColor = Color.White;
-            label13.Location = new Point(21, 199);
+            label13.Location = new Point(29, 214);
             label13.Name = "label13";
             label13.Size = new Size(156, 17);
             label13.TabIndex = 3;
@@ -351,9 +357,10 @@
             // 
             pictureBox6.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(55, 29);
+            pictureBox6.Location = new Point(57, 40);
+            pictureBox6.Margin = new Padding(3, 4, 3, 4);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(88, 75);
+            pictureBox6.Size = new Size(101, 100);
             pictureBox6.TabIndex = 0;
             pictureBox6.TabStop = false;
             // 
@@ -361,7 +368,8 @@
             // 
             pictureBox7.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(57, 32);
+            pictureBox7.Location = new Point(57, 40);
+            pictureBox7.Margin = new Padding(3, 4, 3, 4);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(100, 100);
             pictureBox7.TabIndex = 0;
@@ -371,9 +379,10 @@
             // 
             pictureBox8.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(1, 0);
+            pictureBox8.Location = new Point(3, 4);
+            pictureBox8.Margin = new Padding(3, 4, 3, 4);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(201, 241);
+            pictureBox8.Size = new Size(209, 244);
             pictureBox8.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox8.TabIndex = 13;
             pictureBox8.TabStop = false;
@@ -382,9 +391,10 @@
             // 
             pictureBox9.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(1, 0);
+            pictureBox9.Location = new Point(0, 0);
+            pictureBox9.Margin = new Padding(3, 4, 3, 4);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(204, 241);
+            pictureBox9.Size = new Size(206, 248);
             pictureBox9.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox9.TabIndex = 14;
             pictureBox9.TabStop = false;
@@ -394,8 +404,9 @@
             pictureBox10.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
             pictureBox10.Location = new Point(3, 0);
+            pictureBox10.Margin = new Padding(3, 4, 3, 4);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(201, 241);
+            pictureBox10.Size = new Size(203, 248);
             pictureBox10.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox10.TabIndex = 14;
             pictureBox10.TabStop = false;
@@ -404,9 +415,10 @@
             // 
             pictureBox11.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(5, 3);
+            pictureBox11.Location = new Point(3, 4);
+            pictureBox11.Margin = new Padding(3, 4, 3, 4);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(201, 241);
+            pictureBox11.Size = new Size(203, 248);
             pictureBox11.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox11.TabIndex = 14;
             pictureBox11.TabStop = false;
@@ -415,21 +427,22 @@
             // 
             pictureBox12.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(3, 6);
+            pictureBox12.Location = new Point(3, 4);
+            pictureBox12.Margin = new Padding(3, 4, 3, 4);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(201, 241);
+            pictureBox12.Size = new Size(203, 244);
             pictureBox12.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox12.TabIndex = 14;
             pictureBox12.TabStop = false;
-            pictureBox12.Click += pictureBox12_Click_1;
             // 
             // pictureBox13
             // 
             pictureBox13.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(6, 3);
+            pictureBox13.Location = new Point(4, 4);
+            pictureBox13.Margin = new Padding(3, 4, 3, 4);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(201, 241);
+            pictureBox13.Size = new Size(202, 248);
             pictureBox13.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox13.TabIndex = 14;
             pictureBox13.TabStop = false;
@@ -438,21 +451,22 @@
             // 
             pictureBox14.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(5, 4);
+            pictureBox14.Location = new Point(6, 5);
+            pictureBox14.Margin = new Padding(3, 4, 3, 4);
             pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(201, 241);
+            pictureBox14.Size = new Size(203, 243);
             pictureBox14.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox14.TabIndex = 14;
             pictureBox14.TabStop = false;
-            pictureBox14.Click += pictureBox14_Click;
             // 
             // pictureBox15
             // 
             pictureBox15.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
-            pictureBox15.Location = new Point(2, 3);
+            pictureBox15.Location = new Point(2, 4);
+            pictureBox15.Margin = new Padding(3, 4, 3, 4);
             pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(201, 241);
+            pictureBox15.Size = new Size(207, 244);
             pictureBox15.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox15.TabIndex = 14;
             pictureBox15.TabStop = false;
@@ -463,7 +477,7 @@
             label16.BackColor = Color.FromArgb(5, 11, 38);
             label16.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(33, 141);
+            label16.Location = new Point(36, 163);
             label16.Name = "label16";
             label16.Size = new Size(134, 24);
             label16.TabIndex = 2;
@@ -473,9 +487,10 @@
             // 
             pictureBox1.BackColor = Color.FromArgb(5, 11, 38);
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(50, 38);
+            pictureBox1.Location = new Point(57, 40);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.Size = new Size(101, 100);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -485,11 +500,12 @@
             label15.BackColor = Color.FromArgb(5, 11, 38);
             label15.Font = new Font("Pixelify Sans", 7.79999971F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.White;
-            label15.Location = new Point(24, 182);
+            label15.Location = new Point(29, 206);
             label15.Name = "label15";
             label15.Size = new Size(148, 16);
             label15.TabIndex = 3;
             label15.Text = "Achieve 3 day Streak!";
+            label15.Click += label15_Click;
             // 
             // panel3
             // 
@@ -497,9 +513,10 @@
             panel3.Controls.Add(player3Picture);
             panel3.Controls.Add(player3Username);
             panel3.Controls.Add(pictureBox8);
-            panel3.Location = new Point(33, 140);
+            panel3.Location = new Point(30, 137);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(202, 241);
+            panel3.Size = new Size(209, 252);
             panel3.TabIndex = 15;
             // 
             // panel1
@@ -508,9 +525,10 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label16);
             panel1.Controls.Add(pictureBox9);
-            panel1.Location = new Point(279, 140);
+            panel1.Location = new Point(284, 137);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(208, 241);
+            panel1.Size = new Size(209, 252);
             panel1.TabIndex = 16;
             // 
             // panel2
@@ -519,9 +537,10 @@
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(label14);
             panel2.Controls.Add(pictureBox10);
-            panel2.Location = new Point(516, 140);
+            panel2.Location = new Point(526, 137);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(204, 241);
+            panel2.Size = new Size(209, 252);
             panel2.TabIndex = 17;
             // 
             // panel4
@@ -530,9 +549,10 @@
             panel4.Controls.Add(pictureBox3);
             panel4.Controls.Add(label8);
             panel4.Controls.Add(pictureBox11);
-            panel4.Location = new Point(754, 137);
+            panel4.Location = new Point(767, 137);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(209, 244);
+            panel4.Size = new Size(209, 252);
             panel4.TabIndex = 18;
             // 
             // panel8
@@ -541,9 +561,10 @@
             panel8.Controls.Add(pictureBox7);
             panel8.Controls.Add(label3);
             panel8.Controls.Add(pictureBox12);
-            panel8.Location = new Point(26, 423);
+            panel8.Location = new Point(33, 455);
+            panel8.Margin = new Padding(3, 4, 3, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(209, 247);
+            panel8.Size = new Size(209, 252);
             panel8.TabIndex = 19;
             // 
             // panel7
@@ -552,9 +573,10 @@
             panel7.Controls.Add(pictureBox6);
             panel7.Controls.Add(label6);
             panel7.Controls.Add(pictureBox13);
-            panel7.Location = new Point(274, 426);
+            panel7.Location = new Point(284, 451);
+            panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(210, 244);
+            panel7.Size = new Size(209, 252);
             panel7.TabIndex = 20;
             // 
             // panel6
@@ -563,9 +585,10 @@
             panel6.Controls.Add(pictureBox5);
             panel6.Controls.Add(label12);
             panel6.Controls.Add(pictureBox14);
-            panel6.Location = new Point(519, 425);
+            panel6.Location = new Point(526, 455);
+            panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(209, 245);
+            panel6.Size = new Size(209, 252);
             panel6.TabIndex = 21;
             // 
             // panel5
@@ -574,27 +597,29 @@
             panel5.Controls.Add(pictureBox4);
             panel5.Controls.Add(label10);
             panel5.Controls.Add(pictureBox15);
-            panel5.Location = new Point(754, 426);
+            panel5.Location = new Point(770, 451);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(206, 244);
+            panel5.Size = new Size(209, 252);
             panel5.TabIndex = 22;
             // 
             // pictureBox16
             // 
             pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
-            pictureBox16.Location = new Point(171, 0);
+            pictureBox16.Location = new Point(148, 1);
+            pictureBox16.Margin = new Padding(3, 4, 3, 4);
             pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(839, 745);
+            pictureBox16.Size = new Size(861, 741);
             pictureBox16.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox16.TabIndex = 45;
             pictureBox16.TabStop = false;
             // 
             // sidebar_badges
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 23, 42);
-            ClientSize = new Size(885, 558);
+            ClientSize = new Size(1011, 744);
             Controls.Add(panel5);
             Controls.Add(panel6);
             Controls.Add(panel7);
@@ -607,9 +632,9 @@
             Controls.Add(label1);
             Controls.Add(pictureBox16);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "sidebar_badges";
             Text = "sidebar_badges";
+            Load += sidebar_badges_Load;
             ((System.ComponentModel.ISupportInitialize)player3Picture).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

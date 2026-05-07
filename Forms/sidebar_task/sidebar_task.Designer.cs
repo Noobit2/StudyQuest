@@ -397,7 +397,7 @@
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
             pictureBox8.Location = new Point(162, 3);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(839, 745);
+            pictureBox8.Size = new Size(847, 745);
             pictureBox8.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox8.TabIndex = 44;
             pictureBox8.TabStop = false;
