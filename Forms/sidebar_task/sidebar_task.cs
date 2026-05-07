@@ -33,6 +33,7 @@ namespace StudyQuest
         }
 
         public static int CurrentEXP { get; private set; } = 0;
+        public static int TotalEarnedEXP { get; private set; } = 0;
         public static int CurrentLevel { get; private set; } = 1;
         public static event Action? EXPChanged;
 
@@ -64,12 +65,12 @@ namespace StudyQuest
             this.Hide();
         }
 
-        // ── SAVE to tasks.json ───────────────────────────────────────────────
         private void SaveToDatabase()
         {
             var saveData = new TaskSaveData
             {
                 CurrentEXP = CurrentEXP,
+                TotalEarnedEXP = TotalEarnedEXP,
                 CurrentLevel = CurrentLevel,
                 CompletedCount = CompletedCount,
                 MissedCount = MissedCount,
@@ -93,12 +94,12 @@ namespace StudyQuest
             TaskDatabase.Save(saveData);
         }
 
-        // ── LOAD from tasks.json ─────────────────────────────────────────────
         private void LoadFromDatabase()
         {
             var saveData = TaskDatabase.Load();
 
             CurrentEXP = saveData.CurrentEXP;
+            TotalEarnedEXP = saveData.TotalEarnedEXP;
             CurrentLevel = saveData.CurrentLevel;
             CompletedCount = saveData.CompletedCount;
             MissedCount = saveData.MissedCount;
@@ -126,7 +127,6 @@ namespace StudyQuest
         public static List<string> GetTodayTasks()
         {
             var result = new List<string>();
-
             if (_instance == null) return result;
 
             foreach (var task in _instance._allTasks)
@@ -134,9 +134,10 @@ namespace StudyQuest
                 if (task.IsCompleted || task.IsMissed) continue;
 
                 if (task.Deadline.Date == DateTime.Today)
-                    result.Add($"🔴 {task.Title}  (+{task.ExpReward} EXP)");
-                else if (task.Deadline.Date > DateTime.Today && task.Deadline.Date <= DateTime.Today.AddDays(1))
-                    result.Add($"🟡 {task.Title}  (+{task.ExpReward} EXP)");
+                    result.Add($" {task.Title}  (+{task.ExpReward} EXP)");
+                else if (task.Deadline.Date > DateTime.Today &&
+                         task.Deadline.Date <= DateTime.Today.AddDays(1))
+                    result.Add($" {task.Title}  (+{task.ExpReward} EXP)");
             }
 
             return result;
@@ -222,6 +223,14 @@ namespace StudyQuest
             return (null, null);
         }
 
+        public static void SpendEXP(int amount)
+        {
+            CurrentEXP = Math.Max(0, CurrentEXP - amount);
+            GameSession.TotalXP = CurrentEXP;
+            EXPChanged?.Invoke();
+            _instance?.SaveToDatabase();
+        }
+
         private void unlockButton_Click(object sender, EventArgs e)
         {
             var (listBox, task) = GetSelectedTask();
@@ -263,19 +272,20 @@ namespace StudyQuest
 
             int idx = listBox.Items.IndexOf(task);
             listBox.Items[idx] =
-                $"✓  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{expGain} EXP)";
+                $"✔  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{expGain} EXP)";
 
             listBox.ClearSelected();
-            StreakDatabase.OnTaskCompleted(); // ← update streak FIRST before EXPChanged fires
-            RefreshCounters();               // ← fires EXPChanged, dashboard reads updated streak
+            StreakDatabase.OnTaskCompleted();
+            RefreshCounters();
             SaveToDatabase();
 
             MessageBox.Show(
                 $"Task \"{task.Title}\" completed!\n" +
                 $"+{expGain} EXP earned.\n\n" +
-                $"Total EXP : {CurrentEXP}\n" +
-                $"Level     : {CurrentLevel}",
-                "Task Complete! 🎉",
+                $"Total EXP    : {CurrentEXP}\n" +
+                $"Earned EXP   : {TotalEarnedEXP}\n" +
+                $"Level        : {CurrentLevel}",
+                "Task Complete! ",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -358,18 +368,12 @@ namespace StudyQuest
                 $"Details   : {task.Details}\n" +
                 $"Deadline  : {task.Deadline:MM/dd/yyyy}\n" +
                 $"Difficulty: {task.Difficulty}  (+{task.ExpReward} EXP)\n" +
-                $"Status    : {(task.IsMissed ? "⚠ Missed" : "Pending")}",
+                $"Status    : {(task.IsMissed ? " Missed" : "Pending")}",
                 "Task Details",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private const int MaxLevel = 100;
-
-        private static int ExpToNextLevel(int level)
-        {
-            if (level == 1) return 200;
-            return 100;
-        }
 
         private static int GetCumulativeEXP(int level)
         {
@@ -377,34 +381,41 @@ namespace StudyQuest
             return 200 + (level - 1) * 100;
         }
 
+        private static int ExpToNextLevel(int level)
+        {
+            if (level == 1) return 200;
+            return 100;
+        }
+
         private static void ApplyEXP(int amount)
         {
             CurrentEXP += amount;
+            TotalEarnedEXP += amount;
 
             GameSession.TotalXP = CurrentEXP;
             GameSession.Level = CurrentLevel;
 
             while (CurrentLevel < MaxLevel &&
-                   CurrentEXP >= GetCumulativeEXP(CurrentLevel))
+                   TotalEarnedEXP >= GetCumulativeEXP(CurrentLevel))
             {
                 CurrentLevel++;
-                GameSession.TotalXP = CurrentEXP;
                 GameSession.Level = CurrentLevel;
 
                 if (CurrentLevel == MaxLevel)
                 {
                     MessageBox.Show(
-                        "🏆  MAX LEVEL REACHED!\nYou are now Level 100!",
+                        "  MAX LEVEL REACHED!\nYou are now Level 100!",
                         "Max Level!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show(
-                        $"🎉  LEVEL UP!\nYou are now Level {CurrentLevel}!",
+                        $"  LEVEL UP!\nYou are now Level {CurrentLevel}!",
                         "Level Up", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
+            GameSession.TotalXP = CurrentEXP;
             EXPChanged?.Invoke();
         }
 
@@ -415,10 +426,10 @@ namespace StudyQuest
             EXPChanged?.Invoke();
         }
 
-        // ── Reset all in-memory data (used by ResetManager) ──────────────────
         public static void ResetInMemory()
         {
             CurrentEXP = 0;
+            TotalEarnedEXP = 0;
             CurrentLevel = 1;
             CompletedCount = 0;
             MissedCount = 0;
@@ -489,14 +500,14 @@ namespace StudyQuest
                         _ => HardTaskListBox
                     };
                     target.Items.Add(
-                        $"✓  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{task.ExpReward} EXP)");
+                        $"✔  {task.Title}  [{task.Deadline:MM/dd/yyyy}]  (+{task.ExpReward} EXP)");
                     continue;
                 }
 
                 if (task.IsMissed)
                 {
                     HardTaskListBox.Items.Add(
-                        $"⚠ MISSED: {task.Title}  [{task.Deadline:MM/dd/yyyy}]");
+                        $" MISSED: {task.Title}  [{task.Deadline:MM/dd/yyyy}]");
                     continue;
                 }
 

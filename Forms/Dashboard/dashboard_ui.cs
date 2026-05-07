@@ -34,11 +34,69 @@ namespace StudyQuest
             dashboardButton.BackColor = Color.FromArgb(15, 23, 42);
 
             sidebar_task.EXPChanged += RefreshSidebar;
+            sidebar_avatar.AvatarApplied += OnAvatarApplied;
 
             usernameTextbox.Text = GameSession.Username;
 
+            LoadSavedAvatar(); 
+
             RefreshSidebar();
             ShowPanel(ref _dashPanel, () => new sidebar_dashboard());
+        }
+
+        private void LoadSavedAvatar()
+        {
+            var data = AvatarDatabase.Load();
+
+            var tempAvatar = new sidebar_avatar();
+
+            Image? avatarImage = data.EquippedAvatar switch
+            {
+                "Girl" => GetAvatarImage("Girl"),
+                "Boy" => GetAvatarImage("Boy"),
+                "Banana" => GetAvatarImage("Banana"),
+                _ => GetAvatarImage("Egg")
+            };
+
+            if (avatarImage != null)
+            {
+                userPicture.Image = avatarImage;
+                userPicture.SizeMode = PictureBoxSizeMode.Zoom; 
+            }
+        }
+
+        private Image? GetAvatarImage(string avatarName)
+        {
+
+            try
+            {
+                var tempForm = new sidebar_avatar();
+                Image? img = avatarName switch
+                {
+                    "Girl" => tempForm.GetGirlImage(),
+                    "Boy" => tempForm.GetBoyImage(),
+                    "Banana" => tempForm.GetBananaImage(),
+                    _ => tempForm.GetEggImage()
+                };
+                tempForm.Dispose();
+                return img;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private void OnAvatarApplied(Image img)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action<Image>(OnAvatarApplied), img);
+                return;
+            }
+
+            userPicture.Image = img;
+            userPicture.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private static int GetCumulativeEXP(int level)
@@ -58,14 +116,25 @@ namespace StudyQuest
             usernameTextbox.Text = GameSession.Username;
 
             int level = sidebar_task.CurrentLevel;
-            int currentEXP = sidebar_task.CurrentEXP;
+            int earnedEXP = sidebar_task.TotalEarnedEXP;
             userCurrentLvl.Text = $"Lvl. {level}";
 
-            int xpAtLevelStart = level == 1 ? 0 : GetCumulativeEXP(level - 1);
-            int xpNeededForThisLevel = level == 1 ? 200 : 100;
-            int xpWithinLevel = currentEXP - xpAtLevelStart;
+            int xpAtLevelStart;
+            int xpNeededPerLevel;
 
-            int percent = (int)((float)xpWithinLevel / xpNeededForThisLevel * 100);
+            if (level == 1)
+            {
+                xpAtLevelStart = 0;
+                xpNeededPerLevel = 200;
+            }
+            else
+            {
+                xpAtLevelStart = 200 + (level - 2) * 100;
+                xpNeededPerLevel = 100;
+            }
+
+            int xpWithinLevel = earnedEXP - xpAtLevelStart;
+            int percent = (int)((float)xpWithinLevel / xpNeededPerLevel * 100);
             percent = Math.Max(0, Math.Min(100, percent));
 
             progressBar1.Value = percent;
@@ -89,7 +158,6 @@ namespace StudyQuest
             field.Show();
         }
 
-        // ✅ Save notes before anything closes
         private void SaveNotesBeforeExit()
         {
             if (_dashPanel != null && !_dashPanel.IsDisposed)
@@ -161,10 +229,10 @@ namespace StudyQuest
 
             if (result == DialogResult.Yes)
             {
-                // ✅ Save notes FIRST before anything is closed
                 SaveNotesBeforeExit();
 
                 sidebar_task.EXPChanged -= RefreshSidebar;
+                sidebar_avatar.AvatarApplied -= OnAvatarApplied;
 
                 login_ui loginForm = new login_ui();
                 loginForm.Show();
@@ -191,7 +259,11 @@ namespace StudyQuest
         private void dashboard_ui_Load(object sender, EventArgs e) { }
         private void progressBar1_Click(object sender, EventArgs e) { }
         private void userCurrentLvl_Click(object sender, EventArgs e) { }
-
         private void pnlFormLoader_Paint(object sender, PaintEventArgs e) { }
+
+        private void usernameTextbox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

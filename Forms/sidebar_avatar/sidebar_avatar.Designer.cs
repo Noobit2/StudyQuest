@@ -85,7 +85,7 @@
             // unlockButton
             // 
             unlockButton.FlatStyle = FlatStyle.Flat;
-            unlockButton.Font = new Font("Pixelify Sans", 12F);
+            unlockButton.Font = new Font("Microsoft Sans Serif", 12F);
             unlockButton.ForeColor = Color.White;
             unlockButton.ImageAlign = ContentAlignment.MiddleLeft;
             unlockButton.Location = new Point(846, 672);
@@ -113,11 +113,11 @@
             // greetingsUser
             // 
             greetingsUser.AutoSize = true;
-            greetingsUser.Font = new Font("Pixelify Sans", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            greetingsUser.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             greetingsUser.ForeColor = Color.White;
             greetingsUser.Location = new Point(26, 22);
             greetingsUser.Name = "greetingsUser";
-            greetingsUser.Size = new Size(171, 37);
+            greetingsUser.Size = new Size(149, 36);
             greetingsUser.TabIndex = 9;
             greetingsUser.Text = "My Avatar";
             // 
@@ -153,6 +153,26 @@
             pictureBox28.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox28.TabIndex = 15;
             pictureBox28.TabStop = false;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label5);
+            panel2.Location = new Point(225, 328);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(321, 212);
+            panel2.TabIndex = 14;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 15F);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(78, 95);
+            label5.Name = "label5";
+            label5.Size = new Size(153, 29);
+            label5.TabIndex = 0;
+            label5.Text = "More soon...";
+            label5.Click += label5_Click;
             // 
             // pictureBox4
             // 
@@ -215,7 +235,7 @@
             // applyButton
             // 
             applyButton.FlatStyle = FlatStyle.Flat;
-            applyButton.Font = new Font("Pixelify Sans", 12F);
+            applyButton.Font = new Font("Microsoft Sans Serif", 12F);
             applyButton.ForeColor = Color.White;
             applyButton.ImageAlign = ContentAlignment.MiddleLeft;
             applyButton.Location = new Point(681, 672);
@@ -229,24 +249,25 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Pixelify Sans", 12F);
+            label2.Font = new Font("Microsoft Sans Serif", 12F);
             label2.ForeColor = Color.White;
             label2.Location = new Point(26, 674);
             label2.Name = "label2";
-            label2.Size = new Size(128, 24);
+            label2.Size = new Size(151, 25);
             label2.TabIndex = 12;
-            label2.Text = "Pet's Name: ";
+            label2.Text = "Avatar's Name: ";
             label2.Click += label2_Click;
             // 
             // textBox1
             // 
             textBox1.BackColor = Color.FromArgb(15, 23, 42);
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Pixelify Sans", 12F);
-            textBox1.Location = new Point(152, 672);
+            textBox1.Font = new Font("Microsoft Sans Serif", 12F);
+            textBox1.Location = new Point(171, 672);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(196, 31);
+            textBox1.Size = new Size(196, 30);
             textBox1.TabIndex = 13;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // totalXPText
             // 
@@ -256,7 +277,7 @@
             totalXPText.ForeColor = Color.White;
             totalXPText.Location = new Point(733, 37);
             totalXPText.Name = "totalXPText";
-            totalXPText.Size = new Size(94, 24);
+            totalXPText.Size = new Size(94, 25);
             totalXPText.TabIndex = 0;
             totalXPText.Text = "Total XP:";
             // 
@@ -268,7 +289,7 @@
             numTotalXP.ForeColor = Color.White;
             numTotalXP.Location = new Point(876, 32);
             numTotalXP.Name = "numTotalXP";
-            numTotalXP.Size = new Size(98, 30);
+            numTotalXP.Size = new Size(110, 29);
             numTotalXP.TabIndex = 1;
             numTotalXP.Text = "1170 XP";
             // 

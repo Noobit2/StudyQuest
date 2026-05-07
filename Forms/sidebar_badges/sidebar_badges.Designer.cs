@@ -102,11 +102,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Pixelify Sans", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(33, 34);
+            label1.Location = new Point(29, 26);
             label1.Name = "label1";
-            label1.Size = new Size(377, 37);
+            label1.Size = new Size(286, 29);
             label1.TabIndex = 0;
             label1.Text = "Badges and Achievement";
             label1.Click += label1_Click;
@@ -114,11 +114,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Pixelify Sans", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
             label2.Location = new Point(640, 46);
             label2.Name = "label2";
-            label2.Size = new Size(320, 21);
+            label2.Size = new Size(257, 17);
             label2.TabIndex = 1;
             label2.Text = "0 out of 8 Badges Unlocked! Keep it up!";
             label2.Click += label2_Click;
@@ -131,7 +131,7 @@
             player3CurrentXP.ForeColor = Color.White;
             player3CurrentXP.Location = new Point(11, 182);
             player3CurrentXP.Name = "player3CurrentXP";
-            player3CurrentXP.Size = new Size(182, 17);
+            player3CurrentXP.Size = new Size(119, 13);
             player3CurrentXP.TabIndex = 3;
             player3CurrentXP.Text = "Complete your first task.";
             // 
@@ -141,7 +141,7 @@
             player3Picture.Image = (Image)resources.GetObject("player3Picture.Image");
             player3Picture.Location = new Point(50, 38);
             player3Picture.Name = "player3Picture";
-            player3Picture.Size = new Size(100, 100);
+            player3Picture.Size = new Size(88, 75);
             player3Picture.TabIndex = 0;
             player3Picture.TabStop = false;
             // 
@@ -153,7 +153,7 @@
             player3Username.ForeColor = Color.White;
             player3Username.Location = new Point(16, 141);
             player3Username.Name = "player3Username";
-            player3Username.Size = new Size(171, 24);
+            player3Username.Size = new Size(118, 20);
             player3Username.TabIndex = 2;
             player3Username.Text = "First Task? yey!";
             player3Username.Click += player3Username_Click;
@@ -166,9 +166,10 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(35, 202);
             label3.Name = "label3";
-            label3.Size = new Size(144, 17);
+            label3.Size = new Size(129, 13);
             label3.TabIndex = 3;
-            label3.Text = "Have 100XP or above.";
+            label3.Text = "Achieve 100XP or above.";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -178,7 +179,7 @@
             label4.ForeColor = Color.White;
             label4.Location = new Point(23, 152);
             label4.Name = "label4";
-            label4.Size = new Size(168, 24);
+            label4.Size = new Size(111, 20);
             label4.TabIndex = 2;
             label4.Text = "Just Starting...";
             // 
@@ -212,7 +213,7 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(44, 141);
             label14.Name = "label14";
-            label14.Size = new Size(113, 24);
+            label14.Size = new Size(90, 20);
             label14.TabIndex = 2;
             label14.Text = "I'm On Fire!";
             // 
@@ -224,7 +225,7 @@
             label6.ForeColor = Color.White;
             label6.Location = new Point(21, 137);
             label6.Name = "label6";
-            label6.Size = new Size(178, 48);
+            label6.Size = new Size(127, 40);
             label6.TabIndex = 2;
             label6.Text = "Do I Know \r\nEverything Now?";
             label6.TextAlign = ContentAlignment.MiddleCenter;
@@ -247,7 +248,7 @@
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(51, 41);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(100, 100);
+            pictureBox3.Size = new Size(88, 75);
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
             // 
@@ -259,7 +260,7 @@
             label8.ForeColor = Color.White;
             label8.Location = new Point(27, 144);
             label8.Name = "label8";
-            label8.Size = new Size(161, 24);
+            label8.Size = new Size(119, 20);
             label8.TabIndex = 2;
             label8.Text = "Can't Stop Me~";
             // 
@@ -294,7 +295,7 @@
             label10.ForeColor = Color.White;
             label10.Location = new Point(40, 146);
             label10.Name = "label10";
-            label10.Size = new Size(130, 24);
+            label10.Size = new Size(96, 20);
             label10.TabIndex = 2;
             label10.Text = "Legendary!!!";
             // 
@@ -329,7 +330,7 @@
             label12.ForeColor = Color.White;
             label12.Location = new Point(54, 134);
             label12.Name = "label12";
-            label12.Size = new Size(111, 48);
+            label12.Size = new Size(82, 40);
             label12.TabIndex = 2;
             label12.Text = "Master? \r\nThat's Me.";
             label12.TextAlign = ContentAlignment.MiddleCenter;
@@ -352,7 +353,7 @@
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(55, 29);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(100, 100);
+            pictureBox6.Size = new Size(88, 75);
             pictureBox6.TabIndex = 0;
             pictureBox6.TabStop = false;
             // 
@@ -590,10 +591,10 @@
             // 
             // sidebar_badges
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 23, 42);
-            ClientSize = new Size(1011, 744);
+            ClientSize = new Size(885, 558);
             Controls.Add(panel5);
             Controls.Add(panel6);
             Controls.Add(panel7);
@@ -606,6 +607,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox16);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "sidebar_badges";
             Text = "sidebar_badges";
             ((System.ComponentModel.ISupportInitialize)player3Picture).EndInit();

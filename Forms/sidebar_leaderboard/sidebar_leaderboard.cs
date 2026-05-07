@@ -35,15 +35,15 @@ namespace StudyQuest
         public void LoadLeaderboard()
         {
             var fullBoard = new List<(string Username, int Level, int XP)>(GameSession.OtherPlayers)
-            {
-                (GameSession.Username, GameSession.Level, GameSession.TotalXP)
-            };
+    {
+        (GameSession.Username, GameSession.Level, sidebar_task.TotalEarnedEXP)
+    };
 
             fullBoard = fullBoard.OrderByDescending(p => p.XP).ToList();
 
             label2.Text = $"Week of {GetWeekStartDate()}";
 
-            int myRank = GameSession.GetCurrentRank();
+            int myRank = fullBoard.FindIndex(p => p.Username == GameSession.Username) + 1;
             label11.Text = $"You are #{myRank} this week! Study Hard!";
 
             FillPodium(fullBoard);

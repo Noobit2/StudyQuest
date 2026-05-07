@@ -7,7 +7,7 @@ namespace StudyQuest
     public class StreakData
     {
         public int StreakDays { get; set; } = 0;
-        public string LastStreakDate { get; set; } = "2000-01-01"; // last date a task was completed
+        public string LastStreakDate { get; set; } = "2000-01-01";
     }
 
     public static class StreakDatabase
@@ -43,7 +43,6 @@ namespace StudyQuest
             catch { }
         }
 
-        // ── Call this when a task is completed ───────────────────────────────
         public static StreakData OnTaskCompleted()
         {
             StreakData streak = Load();
@@ -54,17 +53,14 @@ namespace StudyQuest
 
             if (daysSince == 0)
             {
-                // Already completed a task today, no change
                 return streak;
             }
             else if (daysSince == 1)
             {
-                // Completed a task the day before, streak continues
                 streak.StreakDays++;
             }
             else
             {
-                // Missed a day, streak resets to 1
                 streak.StreakDays = 1;
             }
 
@@ -74,13 +70,11 @@ namespace StudyQuest
             return streak;
         }
 
-        // ── Load only, no streak update (used on app startup) ────────────────
         public static StreakData GetCurrent()
         {
             return Load();
         }
 
-        // ── Wipes streak.json back to zero ────────────────────────────────────
         public static void Reset()
         {
             try
