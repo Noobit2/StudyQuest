@@ -135,7 +135,7 @@ namespace StudyQuest
             else
             {
                 // ── Locked — dim everything ───────────────────────────────────
-                panel.BackColor = Color.FromArgb(15, 23, 42);
+                panel.BackColor = Color.FromArgb(5, 11, 38);
 
                 foreach (Control ctrl in panel.Controls)
                 {
@@ -143,7 +143,7 @@ namespace StudyQuest
                         lbl.ForeColor = Color.FromArgb(100, 100, 120);
 
                     if (ctrl is PictureBox pb)
-                        pb.BackColor = Color.FromArgb(25, 30, 50);
+                        pb.BackColor = Color.FromArgb(5, 11, 38);
                 }
 
                 // ── Remove UNLOCKED stamp if badge was revoked ────────────────
@@ -161,5 +161,20 @@ namespace StudyQuest
         private void label1_Click(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
         private void player3Username_Click(object sender, EventArgs e) { }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox12_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

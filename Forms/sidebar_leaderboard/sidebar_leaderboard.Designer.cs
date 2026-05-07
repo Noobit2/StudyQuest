@@ -59,6 +59,7 @@
             pictureBox4 = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)player2Picture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)player1Picture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)player3Picture).BeginInit();
@@ -68,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -247,6 +249,7 @@
             player3Username.TabIndex = 2;
             player3Username.Text = "{username}";
             player3Username.TextAlign = ContentAlignment.MiddleCenter;
+            player3Username.Click += player3Username_Click;
             // 
             // player3RankCount
             // 
@@ -273,7 +276,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Pixelify Sans", 11F);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(570, 45);
+            label11.Location = new Point(565, 42);
             label11.Name = "label11";
             label11.Size = new Size(412, 23);
             label11.TabIndex = 5;
@@ -407,12 +410,22 @@
             pictureBox2.TabIndex = 41;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(167, 1);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(839, 745);
+            pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox3.TabIndex = 42;
+            pictureBox3.TabStop = false;
+            // 
             // sidebar_leaderboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 23, 42);
-            ClientSize = new Size(1011, 744);
+            ClientSize = new Size(1006, 744);
             Controls.Add(player3LvlNum);
             Controls.Add(player3CurrentXP);
             Controls.Add(player2LvlNum);
@@ -437,6 +450,7 @@
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox2);
+            Controls.Add(pictureBox3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "sidebar_leaderboard";
             Text = "sidebar_leaderboard";
@@ -453,6 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -489,5 +504,6 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

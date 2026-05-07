@@ -116,5 +116,10 @@ namespace StudyQuest
         {
 
         }
+
+        private void player3Username_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

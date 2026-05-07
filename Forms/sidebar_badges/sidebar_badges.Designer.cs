@@ -28,56 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sidebar_badges));
             label1 = new Label();
             label2 = new Label();
-            panel3 = new Panel();
             player3CurrentXP = new Label();
             player3Picture = new PictureBox();
             player3Username = new Label();
-            panel1 = new Panel();
-            label15 = new Label();
-            pictureBox1 = new PictureBox();
-            label16 = new Label();
             label3 = new Label();
             label4 = new Label();
-            panel2 = new Panel();
             label5 = new Label();
             pictureBox2 = new PictureBox();
             label14 = new Label();
             label6 = new Label();
-            panel4 = new Panel();
             label7 = new Label();
             pictureBox3 = new PictureBox();
             label8 = new Label();
-            panel5 = new Panel();
             label9 = new Label();
             pictureBox4 = new PictureBox();
             label10 = new Label();
-            panel6 = new Panel();
             label11 = new Label();
             pictureBox5 = new PictureBox();
             label12 = new Label();
-            panel7 = new Panel();
             label13 = new Label();
             pictureBox6 = new PictureBox();
-            panel8 = new Panel();
             pictureBox7 = new PictureBox();
-            panel3.SuspendLayout();
+            pictureBox8 = new PictureBox();
+            pictureBox9 = new PictureBox();
+            pictureBox10 = new PictureBox();
+            pictureBox11 = new PictureBox();
+            pictureBox12 = new PictureBox();
+            pictureBox13 = new PictureBox();
+            pictureBox14 = new PictureBox();
+            pictureBox15 = new PictureBox();
+            label16 = new Label();
+            pictureBox1 = new PictureBox();
+            label15 = new Label();
+            panel3 = new Panel();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel4 = new Panel();
+            panel8 = new Panel();
+            panel7 = new Panel();
+            panel6 = new Panel();
+            panel5 = new Panel();
+            pictureBox16 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)player3Picture).BeginInit();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel3.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel4.SuspendLayout();
+            panel8.SuspendLayout();
+            panel7.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -97,30 +116,20 @@
             label2.AutoSize = true;
             label2.Font = new Font("Pixelify Sans", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(637, 74);
+            label2.Location = new Point(640, 46);
             label2.Name = "label2";
             label2.Size = new Size(320, 21);
             label2.TabIndex = 1;
             label2.Text = "0 out of 8 Badges Unlocked! Keep it up!";
             label2.Click += label2_Click;
             // 
-            // panel3
-            // 
-            panel3.BorderStyle = BorderStyle.Fixed3D;
-            panel3.Controls.Add(player3CurrentXP);
-            panel3.Controls.Add(player3Picture);
-            panel3.Controls.Add(player3Username);
-            panel3.Location = new Point(43, 140);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(201, 241);
-            panel3.TabIndex = 5;
-            // 
             // player3CurrentXP
             // 
             player3CurrentXP.AutoSize = true;
+            player3CurrentXP.BackColor = Color.FromArgb(5, 11, 38);
             player3CurrentXP.Font = new Font("Pixelify Sans", 8F);
             player3CurrentXP.ForeColor = Color.White;
-            player3CurrentXP.Location = new Point(8, 180);
+            player3CurrentXP.Location = new Point(11, 182);
             player3CurrentXP.Name = "player3CurrentXP";
             player3CurrentXP.Size = new Size(182, 17);
             player3CurrentXP.TabIndex = 3;
@@ -128,7 +137,9 @@
             // 
             // player3Picture
             // 
-            player3Picture.Location = new Point(47, 24);
+            player3Picture.BackColor = Color.FromArgb(5, 11, 38);
+            player3Picture.Image = (Image)resources.GetObject("player3Picture.Image");
+            player3Picture.Location = new Point(50, 38);
             player3Picture.Name = "player3Picture";
             player3Picture.Size = new Size(100, 100);
             player3Picture.TabIndex = 0;
@@ -137,62 +148,23 @@
             // player3Username
             // 
             player3Username.AutoSize = true;
+            player3Username.BackColor = Color.FromArgb(5, 11, 38);
             player3Username.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             player3Username.ForeColor = Color.White;
-            player3Username.Location = new Point(13, 139);
+            player3Username.Location = new Point(16, 141);
             player3Username.Name = "player3Username";
             player3Username.Size = new Size(171, 24);
             player3Username.TabIndex = 2;
             player3Username.Text = "First Task? yey!";
             player3Username.Click += player3Username_Click;
             // 
-            // panel1
-            // 
-            panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(label15);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(label16);
-            panel1.Location = new Point(280, 140);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(201, 241);
-            panel1.TabIndex = 6;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Pixelify Sans", 7.79999971F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.ForeColor = Color.White;
-            label15.Location = new Point(21, 180);
-            label15.Name = "label15";
-            label15.Size = new Size(148, 16);
-            label15.TabIndex = 3;
-            label15.Text = "Achieve 7 day Streak!";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(47, 24);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 100);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label16.ForeColor = Color.White;
-            label16.Location = new Point(30, 139);
-            label16.Name = "label16";
-            label16.Size = new Size(134, 24);
-            label16.TabIndex = 2;
-            label16.Text = "Consistency";
-            // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(5, 11, 38);
             label3.Font = new Font("Pixelify Sans", 8F);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(27, 180);
+            label3.Location = new Point(35, 202);
             label3.Name = "label3";
             label3.Size = new Size(144, 17);
             label3.TabIndex = 3;
@@ -201,50 +173,44 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.FromArgb(5, 11, 38);
             label4.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(13, 141);
+            label4.Location = new Point(23, 152);
             label4.Name = "label4";
             label4.Size = new Size(168, 24);
             label4.TabIndex = 2;
             label4.Text = "Just Starting...";
             // 
-            // panel2
-            // 
-            panel2.BorderStyle = BorderStyle.Fixed3D;
-            panel2.Controls.Add(label5);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(label14);
-            panel2.Location = new Point(519, 140);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(201, 241);
-            panel2.TabIndex = 7;
-            // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(5, 11, 38);
             label5.Font = new Font("Pixelify Sans", 8F);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(13, 180);
+            label5.Location = new Point(26, 181);
             label5.Name = "label5";
-            label5.Size = new Size(158, 17);
+            label5.Size = new Size(150, 17);
             label5.TabIndex = 3;
-            label5.Text = "Achieve 50 day Streak!";
+            label5.Text = "Achieve 7 day Streak!";
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(47, 24);
+            pictureBox2.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(32, 25);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 100);
+            pictureBox2.Size = new Size(144, 113);
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
             // label14
             // 
             label14.AutoSize = true;
+            label14.BackColor = Color.FromArgb(5, 11, 38);
             label14.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.White;
-            label14.Location = new Point(39, 139);
+            label14.Location = new Point(44, 141);
             label14.Name = "label14";
             label14.Size = new Size(113, 24);
             label14.TabIndex = 2;
@@ -253,40 +219,33 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(5, 11, 38);
             label6.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(13, 132);
+            label6.Location = new Point(21, 137);
             label6.Name = "label6";
             label6.Size = new Size(178, 48);
             label6.TabIndex = 2;
             label6.Text = "Do I Know \r\nEverything Now?";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel4
-            // 
-            panel4.BorderStyle = BorderStyle.Fixed3D;
-            panel4.Controls.Add(label7);
-            panel4.Controls.Add(pictureBox3);
-            panel4.Controls.Add(label8);
-            panel4.Location = new Point(756, 140);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(201, 241);
-            panel4.TabIndex = 8;
-            // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.FromArgb(5, 11, 38);
             label7.Font = new Font("Pixelify Sans", 8F);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(13, 180);
+            label7.Location = new Point(27, 184);
             label7.Name = "label7";
-            label7.Size = new Size(164, 17);
+            label7.Size = new Size(156, 17);
             label7.TabIndex = 3;
-            label7.Text = "Achieve 100 day Streak!";
+            label7.Text = "Achieve 15 day Streak!";
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(47, 24);
+            pictureBox3.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(51, 41);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(100, 100);
             pictureBox3.TabIndex = 0;
@@ -295,145 +254,339 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.FromArgb(5, 11, 38);
             label8.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(20, 139);
+            label8.Location = new Point(27, 144);
             label8.Name = "label8";
             label8.Size = new Size(161, 24);
             label8.TabIndex = 2;
             label8.Text = "Can't Stop Me~";
             // 
-            // panel5
-            // 
-            panel5.BorderStyle = BorderStyle.Fixed3D;
-            panel5.Controls.Add(label9);
-            panel5.Controls.Add(pictureBox4);
-            panel5.Controls.Add(label10);
-            panel5.Location = new Point(756, 429);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(201, 241);
-            panel5.TabIndex = 12;
-            // 
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(5, 11, 38);
             label9.Font = new Font("Pixelify Sans", 8F);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(47, 180);
+            label9.Location = new Point(51, 199);
             label9.Name = "label9";
-            label9.Size = new Size(97, 17);
+            label9.Size = new Size(95, 17);
             label9.TabIndex = 3;
-            label9.Text = "Achieve lvl. 60";
+            label9.Text = "Achieve lvl. 10";
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(47, 24);
+            pictureBox4.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(51, 29);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(100, 100);
+            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
             // 
             // label10
             // 
             label10.AutoSize = true;
+            label10.BackColor = Color.FromArgb(5, 11, 38);
             label10.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(36, 141);
+            label10.Location = new Point(40, 146);
             label10.Name = "label10";
             label10.Size = new Size(130, 24);
             label10.TabIndex = 2;
             label10.Text = "Legendary!!!";
             // 
-            // panel6
-            // 
-            panel6.BorderStyle = BorderStyle.Fixed3D;
-            panel6.Controls.Add(label11);
-            panel6.Controls.Add(pictureBox5);
-            panel6.Controls.Add(label12);
-            panel6.Location = new Point(519, 429);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(201, 241);
-            panel6.TabIndex = 11;
-            // 
             // label11
             // 
             label11.AutoSize = true;
+            label11.BackColor = Color.FromArgb(5, 11, 38);
             label11.Font = new Font("Pixelify Sans", 8F);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(47, 194);
+            label11.Location = new Point(54, 200);
             label11.Name = "label11";
-            label11.Size = new Size(98, 17);
+            label11.Size = new Size(90, 17);
             label11.TabIndex = 3;
-            label11.Text = "Achieve Lvl.30";
+            label11.Text = "Achieve Lvl.5";
             // 
             // pictureBox5
             // 
-            pictureBox5.Location = new Point(47, 24);
+            pictureBox5.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(54, 30);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(100, 100);
+            pictureBox5.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
             // 
             // label12
             // 
             label12.AutoSize = true;
+            label12.BackColor = Color.FromArgb(5, 11, 38);
             label12.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(47, 128);
+            label12.Location = new Point(54, 134);
             label12.Name = "label12";
             label12.Size = new Size(111, 48);
             label12.TabIndex = 2;
             label12.Text = "Master? \r\nThat's Me.";
             label12.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel7
-            // 
-            panel7.BorderStyle = BorderStyle.Fixed3D;
-            panel7.Controls.Add(label13);
-            panel7.Controls.Add(pictureBox6);
-            panel7.Controls.Add(label6);
-            panel7.Location = new Point(280, 429);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(201, 241);
-            panel7.TabIndex = 10;
-            // 
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.FromArgb(5, 11, 38);
             label13.Font = new Font("Pixelify Sans", 8F);
             label13.ForeColor = Color.White;
-            label13.Location = new Point(13, 194);
+            label13.Location = new Point(21, 199);
             label13.Name = "label13";
-            label13.Size = new Size(164, 17);
+            label13.Size = new Size(156, 17);
             label13.TabIndex = 3;
-            label13.Text = "Have 10,000XP or above.";
+            label13.Text = "Have 1,000XP or above.";
             // 
             // pictureBox6
             // 
-            pictureBox6.Location = new Point(47, 24);
+            pictureBox6.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(55, 29);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(100, 100);
             pictureBox6.TabIndex = 0;
             pictureBox6.TabStop = false;
             // 
-            // panel8
-            // 
-            panel8.BorderStyle = BorderStyle.Fixed3D;
-            panel8.Controls.Add(pictureBox7);
-            panel8.Controls.Add(label3);
-            panel8.Controls.Add(label4);
-            panel8.Location = new Point(43, 429);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(201, 241);
-            panel8.TabIndex = 9;
-            // 
             // pictureBox7
             // 
-            pictureBox7.Location = new Point(47, 24);
+            pictureBox7.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(57, 32);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(100, 100);
             pictureBox7.TabIndex = 0;
             pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(1, 0);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(201, 241);
+            pictureBox8.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox8.TabIndex = 13;
+            pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(1, 0);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(204, 241);
+            pictureBox9.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox9.TabIndex = 14;
+            pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(3, 0);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(201, 241);
+            pictureBox10.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox10.TabIndex = 14;
+            pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.Location = new Point(5, 3);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(201, 241);
+            pictureBox11.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox11.TabIndex = 14;
+            pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            pictureBox12.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
+            pictureBox12.Location = new Point(3, 6);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(201, 241);
+            pictureBox12.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox12.TabIndex = 14;
+            pictureBox12.TabStop = false;
+            pictureBox12.Click += pictureBox12_Click_1;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
+            pictureBox13.Location = new Point(6, 3);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(201, 241);
+            pictureBox13.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox13.TabIndex = 14;
+            pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            pictureBox14.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
+            pictureBox14.Location = new Point(5, 4);
+            pictureBox14.Name = "pictureBox14";
+            pictureBox14.Size = new Size(201, 241);
+            pictureBox14.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox14.TabIndex = 14;
+            pictureBox14.TabStop = false;
+            pictureBox14.Click += pictureBox14_Click;
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
+            pictureBox15.Location = new Point(2, 3);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(201, 241);
+            pictureBox15.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox15.TabIndex = 14;
+            pictureBox15.TabStop = false;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.BackColor = Color.FromArgb(5, 11, 38);
+            label16.Font = new Font("Pixelify Sans", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(33, 141);
+            label16.Name = "label16";
+            label16.Size = new Size(134, 24);
+            label16.TabIndex = 2;
+            label16.Text = "Consistency";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(5, 11, 38);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(50, 38);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.FromArgb(5, 11, 38);
+            label15.Font = new Font("Pixelify Sans", 7.79999971F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(24, 182);
+            label15.Name = "label15";
+            label15.Size = new Size(148, 16);
+            label15.TabIndex = 3;
+            label15.Text = "Achieve 3 day Streak!";
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(player3CurrentXP);
+            panel3.Controls.Add(player3Picture);
+            panel3.Controls.Add(player3Username);
+            panel3.Controls.Add(pictureBox8);
+            panel3.Location = new Point(33, 140);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(202, 241);
+            panel3.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label15);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(label16);
+            panel1.Controls.Add(pictureBox9);
+            panel1.Location = new Point(279, 140);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(208, 241);
+            panel1.TabIndex = 16;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(label14);
+            panel2.Controls.Add(pictureBox10);
+            panel2.Location = new Point(516, 140);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(204, 241);
+            panel2.TabIndex = 17;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(label7);
+            panel4.Controls.Add(pictureBox3);
+            panel4.Controls.Add(label8);
+            panel4.Controls.Add(pictureBox11);
+            panel4.Location = new Point(754, 137);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(209, 244);
+            panel4.TabIndex = 18;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(label4);
+            panel8.Controls.Add(pictureBox7);
+            panel8.Controls.Add(label3);
+            panel8.Controls.Add(pictureBox12);
+            panel8.Location = new Point(26, 423);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(209, 247);
+            panel8.TabIndex = 19;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(label13);
+            panel7.Controls.Add(pictureBox6);
+            panel7.Controls.Add(label6);
+            panel7.Controls.Add(pictureBox13);
+            panel7.Location = new Point(274, 426);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(210, 244);
+            panel7.TabIndex = 20;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(label11);
+            panel6.Controls.Add(pictureBox5);
+            panel6.Controls.Add(label12);
+            panel6.Controls.Add(pictureBox14);
+            panel6.Location = new Point(519, 425);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(209, 245);
+            panel6.TabIndex = 21;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(label9);
+            panel5.Controls.Add(pictureBox4);
+            panel5.Controls.Add(label10);
+            panel5.Controls.Add(pictureBox15);
+            panel5.Location = new Point(754, 426);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(206, 244);
+            panel5.TabIndex = 22;
+            // 
+            // pictureBox16
+            // 
+            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
+            pictureBox16.Location = new Point(171, 0);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(839, 745);
+            pictureBox16.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox16.TabIndex = 45;
+            pictureBox16.TabStop = false;
             // 
             // sidebar_badges
             // 
@@ -451,33 +604,43 @@
             Controls.Add(panel3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(pictureBox16);
             FormBorderStyle = FormBorderStyle.None;
             Name = "sidebar_badges";
             Text = "sidebar_badges";
+            ((System.ComponentModel.ISupportInitialize)player3Picture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)player3Picture).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -486,37 +649,46 @@
 
         private Label label1;
         private Label label2;
-        private Panel panel3;
         private Label player3Username;
         private PictureBox player3Picture;
         private Label player3CurrentXP;
-        private Panel panel1;
         private Label label3;
-        private PictureBox pictureBox1;
         private Label label4;
-        private Panel panel2;
         private Label label5;
         private PictureBox pictureBox2;
         private Label label6;
-        private Panel panel4;
         private Label label7;
         private PictureBox pictureBox3;
         private Label label8;
-        private Panel panel5;
         private Label label9;
         private PictureBox pictureBox4;
         private Label label10;
-        private Panel panel6;
         private Label label11;
         private PictureBox pictureBox5;
         private Label label12;
-        private Panel panel7;
         private Label label13;
         private PictureBox pictureBox6;
         private Label label14;
-        private Panel panel8;
-        private Label label15;
         private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox9;
+        private PictureBox pictureBox10;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox13;
+        private PictureBox pictureBox12;
+        private PictureBox pictureBox15;
+        private PictureBox pictureBox14;
         private Label label16;
+        private PictureBox pictureBox1;
+        private Label label15;
+        private Panel panel3;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel4;
+        private Panel panel8;
+        private Panel panel7;
+        private Panel panel6;
+        private Panel panel5;
+        private PictureBox pictureBox16;
     }
 }

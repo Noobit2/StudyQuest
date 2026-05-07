@@ -44,9 +44,11 @@ namespace StudyQuest
             taskButton = new Button();
             dashboardButton = new Button();
             pnlFormLoader = new Panel();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userPicture).BeginInit();
             sidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -131,9 +133,8 @@ namespace StudyQuest
             sidebar.Controls.Add(taskButton);
             sidebar.Controls.Add(dashboardButton);
             sidebar.Controls.Add(panel1);
-            sidebar.Dock = DockStyle.Left;
             sidebar.Font = new Font("Microsoft Sans Serif", 10F);
-            sidebar.Location = new Point(0, 0);
+            sidebar.Location = new Point(12, 8);
             sidebar.Name = "sidebar";
             sidebar.Size = new Size(245, 744);
             sidebar.TabIndex = 0;
@@ -142,7 +143,7 @@ namespace StudyQuest
             // pnlNav
             // 
             pnlNav.BackColor = Color.FromArgb(0, 126, 249);
-            pnlNav.Location = new Point(3, 325);
+            pnlNav.Location = new Point(10, 325);
             pnlNav.Margin = new Padding(3, 4, 3, 4);
             pnlNav.Name = "pnlNav";
             pnlNav.Size = new Size(3, 100);
@@ -265,21 +266,31 @@ namespace StudyQuest
             // 
             // pnlFormLoader
             // 
-            pnlFormLoader.Dock = DockStyle.Bottom;
-            pnlFormLoader.Location = new Point(245, 0);
+            pnlFormLoader.Location = new Point(247, 8);
             pnlFormLoader.Name = "pnlFormLoader";
-            pnlFormLoader.Size = new Size(1010, 744);
+            pnlFormLoader.Size = new Size(1011, 744);
             pnlFormLoader.TabIndex = 1;
             pnlFormLoader.Paint += pnlFormLoader_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-5, -1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1274, 764);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // dashboard_ui
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 23, 42);
-            ClientSize = new Size(1255, 744);
-            Controls.Add(pnlFormLoader);
+            ClientSize = new Size(1270, 760);
             Controls.Add(sidebar);
+            Controls.Add(pnlFormLoader);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1255, 744);
             Name = "dashboard_ui";
@@ -290,6 +301,7 @@ namespace StudyQuest
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)userPicture).EndInit();
             sidebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -310,5 +322,6 @@ namespace StudyQuest
         private Label userCurrentLvl;
         private Panel pnlNav;
         private Panel pnlFormLoader;
+        private PictureBox pictureBox1;
     }
 }
