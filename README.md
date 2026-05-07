@@ -1,3 +1,5 @@
+<img width="1269" height="425" alt="Screenshot 2026-05-07 233337" src="https://github.com/user-attachments/assets/fbfd0f5c-6eb9-4325-a1d4-55b63652ede4" />
+
 # 📚 StudyQuest
 
 <div align="center">
